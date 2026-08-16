@@ -1,0 +1,6 @@
+{
+  "name": "lazada-hackathon5-app",
+  "private": true,
+  "type": "module",
+  "description": "选品世界模型主链路：ontology / action / flow，LLM 走 qodercli"
+}

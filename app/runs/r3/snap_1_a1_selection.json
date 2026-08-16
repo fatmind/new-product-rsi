@@ -1,0 +1,60 @@
+{
+  "selection_cards": [
+    {
+      "card_id": "card_premium_metal_band",
+      "cluster_id": "premium_metal_band",
+      "verdict": "推",
+      "reason": "金属表带三个市场都在热：搜索热度在涨、竞对销量在涨，咱们平台流量不小却一单没卖，是实打实的空档，新加坡白领人群最旺。客单价偏高，买家下单会挑，定价要贴住竞对 35-55 美元的价位带，别挂贵了，就稳。",
+      "confidence": 0.8
+    },
+    {
+      "card_id": "card_comfort_nylon_band",
+      "cluster_id": "comfort_nylon_band",
+      "verdict": "推",
+      "reason": "菲律宾学生党对尼龙表带的需求量大又稳定，竞对销量一路从一百多涨到三百多，咱们平台菲律宾流量很大却零成交，缺货是明摆着的。价位 8-15 美元贴得住竞对 7-13。注意搜索热度没再大涨、印尼和新加坡在回落，这是稳的大市场不是爆发风口，主要靠菲律宾走量。",
+      "confidence": 0.7
+    },
+    {
+      "card_id": "card_kids_band",
+      "cluster_id": "kids_band",
+      "verdict": "推",
+      "reason": "儿童小码表带三个市场都在慢慢往上走：搜索热度涨、竞对销量涨（菲律宾最明显），咱们平台零订单、流量还在涨，是真缺口。价格 7-13 美元和竞对 6-12 贴得住，家长给孩子买是刚需，值得发。",
+      "confidence": 0.7
+    },
+    {
+      "card_id": "card_charging_dock",
+      "cluster_id": "charging_dock",
+      "verdict": "不推",
+      "reason": "充电底座的需求太小还在往下走：竞对三个市场每周才卖 2-6 个，搜索热度只有别的簇的零头，需求根本没被验证。而且官方买表本来就送充电线，底座可有可无，发了大概率没人买。",
+      "confidence": 0.85
+    },
+    {
+      "card_id": "card_cheap_strap_basic",
+      "cluster_id": "cheap_strap_basic",
+      "verdict": "不推",
+      "reason": "素色基础表带虽然搜索和竞对销量都很大，但竞对只卖 2.5-4 美元，咱们这个簇却定在 7-10 美元，明显贵过消费者验证过的价位。这个品就是拼便宜，贵一倍多没人买单，别发。",
+      "confidence": 0.85
+    },
+    {
+      "card_id": "card_leather_band_classic",
+      "cluster_id": "leather_band_classic",
+      "verdict": "推",
+      "reason": "经典皮表带在新加坡明显在升温：搜索热度从 330 涨到 520 以上，竞对销量也在涨，咱们平台新加坡白领流量不小却零成交，是真空档。印尼、菲律宾竞对销量也在慢慢涨。价格和竞对 14-24 基本贴得住，按竞对价位定价，商务通勤都适用，值得发。",
+      "confidence": 0.75
+    },
+    {
+      "card_id": "card_metal_bezel_ring",
+      "cluster_id": "metal_bezel_ring",
+      "verdict": "不推",
+      "reason": "金属表圈看着热——搜索和竞对销量都在涨，但咱们平台上已经有商家在卖、每周都有稳定成交，这是存量生意。新发品是抢老商家的单，平台并没有缺货，不该当新机会推。",
+      "confidence": 0.8
+    },
+    {
+      "card_id": "card_watch_stand",
+      "cluster_id": "watch_stand",
+      "verdict": "不推",
+      "reason": "床头支架需求太小：竞对每周只卖 1-5 个，搜索热度是全部候选里最低的，咱们平台流量也最少。小众装饰摆件撑不起销量，发了很难破零，别发。",
+      "confidence": 0.9
+    }
+  ]
+}

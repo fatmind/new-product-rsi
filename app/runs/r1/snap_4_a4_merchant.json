@@ -1,0 +1,72 @@
+{
+  "merchant_decisions": [
+    {
+      "merchant_id": "m_trader_deco",
+      "package_id": "pkg_comfort_nylon_band",
+      "publish": true,
+      "why": "表带和饰品配件是相邻品类，供货渠道能覆盖；菲律宾需求涨、平台零订单，缺口明确"
+    },
+    {
+      "merchant_id": "m_trader_deco",
+      "package_id": "pkg_sport_loop_band",
+      "publish": true,
+      "why": "三个市场竞对销量翻倍、搜索热度大涨，需求真实放大，平台有人看却一单没出"
+    },
+    {
+      "merchant_id": "m_trader_deco",
+      "package_id": "pkg_kids_band",
+      "publish": false,
+      "why": "一轮最多上2个新品，运动织带和尼龙表带信号更强，先集中精力押这两个"
+    },
+    {
+      "merchant_id": "m_factory_leather",
+      "package_id": "pkg_kids_band",
+      "publish": false,
+      "why": "我厂里只有皮具和皮表带产线，做不了硅胶表带，工艺不匹配，再好的补贴也接不了"
+    },
+    {
+      "merchant_id": "m_trader_3c",
+      "package_id": "pkg_kids_band",
+      "publish": false,
+      "why": "我是卖耳机和充电器的，儿童表带跟我现有货源完全不沾边，硅胶只是沾个边，还得重新找供应商、不懂品控，这属于跨能力边界，理由再漂亮也不碰。"
+    },
+    {
+      "merchant_id": "m_premium_boutique",
+      "package_id": "pkg_kids_band",
+      "publish": true,
+      "why": "卖表带的做表带，材质从皮换硅胶算相邻品类，供应链够得着；菲律宾需求涨得确实明显，可以小批量试试"
+    }
+  ],
+  "products": [
+    {
+      "product_id": "prod_comfort_nylon_band_m_trader_deco",
+      "cluster_id": "comfort_nylon_band",
+      "attrs": "尼龙编织舒适表带，轻软透气，多色可选，适合细手腕日常佩戴",
+      "price": 12.9,
+      "subsidy": 2,
+      "merchant_id": "m_trader_deco",
+      "gmt_create": "2026-08-14 14:06:44",
+      "sales_7d": null
+    },
+    {
+      "product_id": "prod_sport_loop_band_m_trader_deco",
+      "cluster_id": "sport_loop_band",
+      "attrs": "回环式弹性织物运动表带，魔术贴调节，轻透排汗，运动通勤两用",
+      "price": 14.9,
+      "subsidy": 3.45,
+      "merchant_id": "m_trader_deco",
+      "gmt_create": "2026-08-14 14:06:44",
+      "sales_7d": null
+    },
+    {
+      "product_id": "prod_kids_band_m_premium_boutique",
+      "cluster_id": "kids_band",
+      "attrs": "儿童硅胶小码表带，卡通恐龙&星星图案，粉色/蓝色双色可选，防丢按扣设计，适合小手围12-15cm",
+      "price": 12.9,
+      "subsidy": 1.5,
+      "merchant_id": "m_premium_boutique",
+      "gmt_create": "2026-08-14 14:07:35",
+      "sales_7d": null
+    }
+  ]
+}

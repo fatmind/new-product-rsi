@@ -1,0 +1,16 @@
+# OS
+.DS_Store
+
+# runtime / state
+/logs/
+.daemon-state.json
+operation_log.json
+app/runs/*/logs/
+app/runs/analyze.log
+
+# temp
+/tmp/
+node_modules/
+
+# tooling
+.qoder/

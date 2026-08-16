@@ -1,0 +1,57 @@
+{
+  "products_with_sales": [
+    {
+      "product_id": "prod_comfort_nylon_band_m_trader_deco",
+      "cluster_id": "comfort_nylon_band",
+      "attrs": "尼龙编织舒适表带，轻软透气，多色可选，适合细手腕日常佩戴",
+      "price": 12.9,
+      "subsidy": 2,
+      "merchant_id": "m_trader_deco",
+      "gmt_create": "2026-08-14 14:06:44",
+      "sales_7d": 5
+    },
+    {
+      "product_id": "prod_sport_loop_band_m_trader_deco",
+      "cluster_id": "sport_loop_band",
+      "attrs": "回环式弹性织物运动表带，魔术贴调节，轻透排汗，运动通勤两用",
+      "price": 14.9,
+      "subsidy": 3.45,
+      "merchant_id": "m_trader_deco",
+      "gmt_create": "2026-08-14 14:06:44",
+      "sales_7d": 6
+    },
+    {
+      "product_id": "prod_kids_band_m_premium_boutique",
+      "cluster_id": "kids_band",
+      "attrs": "儿童硅胶小码表带，卡通恐龙&星星图案，粉色/蓝色双色可选，防丢按扣设计，适合小手围12-15cm",
+      "price": 12.9,
+      "subsidy": 1.5,
+      "merchant_id": "m_premium_boutique",
+      "gmt_create": "2026-08-14 14:07:35",
+      "sales_7d": 4
+    }
+  ],
+  "sales_by_group": {
+    "prod_comfort_nylon_band_m_trader_deco": {
+      "sport_fitness": 1,
+      "commuter_whitecollar": 0,
+      "young_student": 4,
+      "onlooker": 0,
+      "discount_hunter": 0
+    },
+    "prod_sport_loop_band_m_trader_deco": {
+      "sport_fitness": 3,
+      "commuter_whitecollar": 0,
+      "young_student": 3,
+      "onlooker": 0,
+      "discount_hunter": 0
+    },
+    "prod_kids_band_m_premium_boutique": {
+      "sport_fitness": 0,
+      "commuter_whitecollar": 0,
+      "young_student": 4,
+      "onlooker": 0,
+      "discount_hunter": 0
+    }
+  }
+}

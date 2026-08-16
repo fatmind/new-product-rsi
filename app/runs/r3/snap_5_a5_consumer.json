@@ -1,0 +1,74 @@
+{
+  "products_with_sales": [
+    {
+      "product_id": "prod_premium_metal_band_m_trader_deco",
+      "cluster_id": "premium_metal_band",
+      "attrs": "不锈钢米兰尼斯编织表带，银色，商务正式风，质感耐看",
+      "price": 45,
+      "subsidy": 13.5,
+      "merchant_id": "m_trader_deco",
+      "gmt_create": "2026-08-14 14:36:09",
+      "sales_7d": 4
+    },
+    {
+      "product_id": "prod_comfort_nylon_band_m_trader_deco",
+      "cluster_id": "comfort_nylon_band",
+      "attrs": "尼龙编织表带，多色可选，轻软透气，适合日常佩戴",
+      "price": 12,
+      "subsidy": 2,
+      "merchant_id": "m_trader_deco",
+      "gmt_create": "2026-08-14 14:36:09",
+      "sales_7d": 5
+    },
+    {
+      "product_id": "prod_kids_band_m_trader_sport",
+      "cluster_id": "kids_band",
+      "attrs": "儿童硅胶表带，卡通彩配色，防丢扣设计，适合儿童手腕佩戴",
+      "price": 12.9,
+      "subsidy": 2.7,
+      "merchant_id": "m_trader_sport",
+      "gmt_create": "2026-08-14 14:36:30",
+      "sales_7d": 2
+    },
+    {
+      "product_id": "prod_leather_band_classic_m_trader_wearable",
+      "cluster_id": "leather_band_classic",
+      "attrs": "头层牛皮经典皮表带，棕黑两色，商务休闲通用",
+      "price": 24,
+      "subsidy": 5.7,
+      "merchant_id": "m_trader_wearable",
+      "gmt_create": "2026-08-14 14:37:26",
+      "sales_7d": 1
+    }
+  ],
+  "sales_by_group": {
+    "prod_premium_metal_band_m_trader_deco": {
+      "sport_fitness": 0,
+      "commuter_whitecollar": 4,
+      "young_student": 0,
+      "onlooker": 0,
+      "discount_hunter": 0
+    },
+    "prod_comfort_nylon_band_m_trader_deco": {
+      "sport_fitness": 1,
+      "commuter_whitecollar": 0,
+      "young_student": 4,
+      "onlooker": 0,
+      "discount_hunter": 0
+    },
+    "prod_kids_band_m_trader_sport": {
+      "sport_fitness": 0,
+      "commuter_whitecollar": 0,
+      "young_student": 2,
+      "onlooker": 0,
+      "discount_hunter": 0
+    },
+    "prod_leather_band_classic_m_trader_wearable": {
+      "sport_fitness": 0,
+      "commuter_whitecollar": 1,
+      "young_student": 0,
+      "onlooker": 0,
+      "discount_hunter": 0
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "merchant_decisions": [
+    {
+      "merchant_id": "m_trader_wearable",
+      "package_id": "pkg_armband",
+      "publish": true,
+      "why": "臂带跟我主营的智能手表配件是一条线的，货也好进，搜索量翻倍涨还没人卖，定16.9补贴后13.9还能压在竞对中位价下面，值得上"
+    },
+    {
+      "merchant_id": "m_trader_wearable",
+      "package_id": "pkg_magnetic_buckle",
+      "publish": true,
+      "why": "这算手表配件的周边，跟我的主营沾边、货源够得着，虽然量还没起来但竞对刚进场，先占个位置不吃亏"
+    }
+  ],
+  "products": [
+    {
+      "product_id": "prod_armband_m_trader_wearable",
+      "cluster_id": "armband",
+      "attrs": "黑色透气织物上臂运动臂带，硅胶防滑内衬，灰黑简约配色，跑步/健身场景",
+      "price": 16.9,
+      "subsidy": 3,
+      "merchant_id": "m_trader_wearable",
+      "gmt_create": "2026-08-14 14:48:56",
+      "sales_7d": null
+    },
+    {
+      "product_id": "prod_magnetic_buckle_m_trader_wearable",
+      "cluster_id": "magnetic_buckle",
+      "attrs": "金属磁吸快拆转接扣，银色/黑色可选，免工具换表带，适配主流智能手表表带",
+      "price": 9,
+      "subsidy": 2.1,
+      "merchant_id": "m_trader_wearable",
+      "gmt_create": "2026-08-14 14:48:56",
+      "sales_7d": null
+    }
+  ]
+}

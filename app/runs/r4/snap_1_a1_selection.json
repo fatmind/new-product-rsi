@@ -1,0 +1,60 @@
+{
+  "selection_cards": [
+    {
+      "card_id": "card_armband",
+      "cluster_id": "armband",
+      "verdict": "推",
+      "reason": "臂带的需求正在快速涨起来——近几个月搜索量涨了2-3倍，竞对平台也在大量出货。我们平台上每天都有大几百人在搜臂带，但一家卖的都没有，很多人想买找不到地方。运动健身人群是主力，和臂带的使用场景天然匹配。建议价位控制在$10-18，正好和竞对重合。",
+      "confidence": 0.92
+    },
+    {
+      "card_id": "card_premium_metal_band",
+      "cluster_id": "premium_metal_band",
+      "verdict": "不推",
+      "reason": "高档金属表带的搜索需求和竞对销量绝对量都不大，印尼市场的竞对每周只卖几十条。虽然新加坡商务人群有些兴趣，但整体规模比其他候选品类小得多。而且这个品单价偏高（$25-60），我们平台的买家购买力能不能撑起稳定销量不好说。",
+      "confidence": 0.78
+    },
+    {
+      "card_id": "card_kids_band",
+      "cluster_id": "kids_band",
+      "verdict": "不推",
+      "reason": "儿童表带的搜索热度过去大半年几乎没有增长，竞对销量也只是缓慢爬升、没有爆发迹象。而且在我们平台上搜这个品的主力人群是运动健身和学生，和'家长给孩子买表带'的场景不太对得上，流量含金量不高。",
+      "confidence": 0.85
+    },
+    {
+      "card_id": "card_bling_case",
+      "cluster_id": "bling_case",
+      "verdict": "不推",
+      "reason": "水钻保护壳的搜索热度和竞对销量都在持续往下走，不是需求在涨而是需求在退。虽然我们平台每天有不少人浏览这个品类，但绝大多数是随便看看的闲逛流量，真正下单的主力人群（运动健身、学生、白领）对这个品的兴趣很弱。",
+      "confidence": 0.9
+    },
+    {
+      "card_id": "card_magnetic_buckle",
+      "cluster_id": "magnetic_buckle",
+      "verdict": "推",
+      "reason": "磁吸快拆扣是个新品类，最近两个月搜索量突然加速增长，印尼、新加坡、菲律宾三国都在涨，竞对也开始有出货了。我们平台上各个买家群的浏览都在快速增加，但还没有人卖——正好卡在需求起势的窗口期。缺点是绝对量还没那么大，但增速快、竞争少，先发优势明显。",
+      "confidence": 0.72
+    },
+    {
+      "card_id": "card_leather_band_classic",
+      "cluster_id": "leather_band_classic",
+      "verdict": "不推",
+      "reason": "经典皮表带的搜索热度过去大半年一直平稳，没有明显的上涨趋势，竞对出货量也只是缓慢增长。需求确实存在，但不算'新兴机会'，更多是稳定存量生意。现在进场没有时间窗口优势。",
+      "confidence": 0.82
+    },
+    {
+      "card_id": "card_cleaning_kit",
+      "cluster_id": "cleaning_kit",
+      "verdict": "不推",
+      "reason": "清洁套装的搜索量非常低且长期不动，竞对平台每周也只卖三五单。这个品属于'可买可不买'的低频耗材，买家不会专门来搜，需求撑不起一个新品的稳定销量。",
+      "confidence": 0.95
+    },
+    {
+      "card_id": "card_cable_organizer",
+      "cluster_id": "cable_organizer",
+      "verdict": "不推",
+      "reason": "充电线收纳是通用小配件，几乎没有针对Fitbit Air的专属需求——买它的人随便什么平台都能买，不需要等我们推。搜索量和竞对销量都极低，不值得专门推给商家发品。",
+      "confidence": 0.95
+    }
+  ]
+}

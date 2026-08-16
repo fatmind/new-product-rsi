@@ -1,0 +1,72 @@
+{
+  "merchant_decisions": [
+    {
+      "merchant_id": "m_factory_leather",
+      "package_id": "pkg_comfort_nylon_band",
+      "publish": false,
+      "why": "我是做皮具的工厂，尼龙编织表带我产线做不了"
+    },
+    {
+      "merchant_id": "m_factory_leather",
+      "package_id": "pkg_kids_band",
+      "publish": false,
+      "why": "硅胶表带要用注塑机，我的皮具产线做不了"
+    },
+    {
+      "merchant_id": "m_factory_leather",
+      "package_id": "pkg_leather_band_classic",
+      "publish": true,
+      "why": "皮表带我产线能干，新加坡白领市场搜索和销量都在涨，值得试"
+    },
+    {
+      "merchant_id": "m_trader_general",
+      "package_id": "pkg_comfort_nylon_band",
+      "publish": true,
+      "why": "我是做综合百货的贸易商，进尼龙表带这类小配件够得着供应链；菲律宾搜索翻倍、竞对每周卖300多单还涨，数据够硬，这个需求我信"
+    },
+    {
+      "merchant_id": "m_trader_general",
+      "package_id": "pkg_kids_band",
+      "publish": false,
+      "why": "说搜索和销量都在涨，但一个具体数字都没有，我信不过这种空话"
+    },
+    {
+      "merchant_id": "m_trader_sport",
+      "package_id": "pkg_kids_band",
+      "publish": true,
+      "why": "儿童硅胶表带和运动户外配件材质一样、供应链能共用，需求往上走但平台没货，进价7美元出头卖8.99不贵，先试一单看看"
+    }
+  ],
+  "products": [
+    {
+      "product_id": "prod_leather_band_classic_m_factory_leather",
+      "cluster_id": "leather_band_classic",
+      "attrs": "头层牛皮，棕黑两色可选，商务休闲通用款",
+      "price": 19,
+      "subsidy": 3,
+      "merchant_id": "m_factory_leather",
+      "gmt_create": "2026-08-14 14:57:33",
+      "sales_7d": null
+    },
+    {
+      "product_id": "prod_comfort_nylon_band_m_trader_general",
+      "cluster_id": "comfort_nylon_band",
+      "attrs": "尼龙编织细款表带，多色可选，轻软透气，适合日常佩戴",
+      "price": 12.99,
+      "subsidy": 2.5,
+      "merchant_id": "m_trader_general",
+      "gmt_create": "2026-08-14 14:58:00",
+      "sales_7d": null
+    },
+    {
+      "product_id": "prod_kids_band_m_trader_sport",
+      "cluster_id": "kids_band",
+      "attrs": "卡通配色硅胶儿童小码表带，防丢扣设计，适合6-12岁孩子手腕",
+      "price": 8.99,
+      "subsidy": 2,
+      "merchant_id": "m_trader_sport",
+      "gmt_create": "2026-08-14 14:58:14",
+      "sales_7d": null
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "products_with_sales": [
+    {
+      "product_id": "prod_comfort_nylon_band_m_factory_leather",
+      "cluster_id": "comfort_nylon_band",
+      "attrs": "尼龙编织表带，多色可换，轻软透气，适合细手腕日常佩戴",
+      "price": 10,
+      "subsidy": 3,
+      "merchant_id": "m_factory_leather",
+      "gmt_create": "2026-08-14 14:15:18",
+      "sales_7d": 7
+    },
+    {
+      "product_id": "prod_sport_loop_band_m_factory_leather",
+      "cluster_id": "sport_loop_band",
+      "attrs": "回环式弹性织物表带，魔术贴调节，轻透排汗，运动通勤两用",
+      "price": 11.5,
+      "subsidy": 2.5,
+      "merchant_id": "m_factory_leather",
+      "gmt_create": "2026-08-14 14:15:18",
+      "sales_7d": 6
+    },
+    {
+      "product_id": "prod_premium_metal_band_m_trader_general",
+      "cluster_id": "premium_metal_band",
+      "attrs": "不锈钢米兰尼斯编织表带，银色，商务简约风格",
+      "price": 42.99,
+      "subsidy": 12,
+      "merchant_id": "m_trader_general",
+      "gmt_create": "2026-08-14 14:16:11",
+      "sales_7d": 4
+    },
+    {
+      "product_id": "prod_screen_protector_m_trader_general",
+      "cluster_id": "screen_protector",
+      "attrs": "钢化膜，透明高透，防刮，通用型",
+      "price": 4.99,
+      "subsidy": 1.05,
+      "merchant_id": "m_trader_general",
+      "gmt_create": "2026-08-14 14:16:11",
+      "sales_7d": 2
+    }
+  ],
+  "sales_by_group": {
+    "prod_comfort_nylon_band_m_factory_leather": {
+      "sport_fitness": 1,
+      "commuter_whitecollar": 0,
+      "young_student": 6,
+      "onlooker": 0,
+      "discount_hunter": 0
+    },
+    "prod_sport_loop_band_m_factory_leather": {
+      "sport_fitness": 3,
+      "commuter_whitecollar": 0,
+      "young_student": 3,
+      "onlooker": 0,
+      "discount_hunter": 0
+    },
+    "prod_premium_metal_band_m_trader_general": {
+      "sport_fitness": 0,
+      "commuter_whitecollar": 4,
+      "young_student": 0,
+      "onlooker": 0,
+      "discount_hunter": 0
+    },
+    "prod_screen_protector_m_trader_general": {
+      "sport_fitness": 0,
+      "commuter_whitecollar": 0,
+      "young_student": 1,
+      "onlooker": 0,
+      "discount_hunter": 1
+    }
+  }
+}

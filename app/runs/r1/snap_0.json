@@ -1,0 +1,54 @@
+{
+  "candidates": [
+    "charging_dock",
+    "cleaning_kit",
+    "comfort_nylon_band",
+    "kids_band",
+    "screen_protector",
+    "silicone_case_sport",
+    "sport_loop_band",
+    "travel_case"
+  ],
+  "merchants": [
+    {
+      "merchant_id": "m_trader_wearable",
+      "trust": 0.7
+    },
+    {
+      "merchant_id": "m_factory_strap",
+      "trust": 0.6
+    },
+    {
+      "merchant_id": "m_premium_boutique",
+      "trust": 0.7
+    },
+    {
+      "merchant_id": "m_trader_deco",
+      "trust": 0.65
+    },
+    {
+      "merchant_id": "m_trader_3c",
+      "trust": 0.5
+    },
+    {
+      "merchant_id": "m_factory_silicone",
+      "trust": 0.55
+    },
+    {
+      "merchant_id": "m_trader_sport",
+      "trust": 0.65
+    },
+    {
+      "merchant_id": "m_trader_charge",
+      "trust": 0.6
+    },
+    {
+      "merchant_id": "m_factory_leather",
+      "trust": 0.6
+    },
+    {
+      "merchant_id": "m_trader_general",
+      "trust": 0.5
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "candidates": [
+    "armband",
+    "bling_case",
+    "cable_organizer",
+    "cleaning_kit",
+    "kids_band",
+    "leather_band_classic",
+    "magnetic_buckle",
+    "premium_metal_band"
+  ],
+  "merchants": [
+    {
+      "merchant_id": "m_trader_wearable",
+      "trust": 0.6
+    },
+    {
+      "merchant_id": "m_factory_strap",
+      "trust": 0.6
+    },
+    {
+      "merchant_id": "m_premium_boutique",
+      "trust": 0.6
+    },
+    {
+      "merchant_id": "m_trader_deco",
+      "trust": 0.85
+    },
+    {
+      "merchant_id": "m_trader_3c",
+      "trust": 0.5
+    },
+    {
+      "merchant_id": "m_factory_silicone",
+      "trust": 0.55
+    },
+    {
+      "merchant_id": "m_trader_sport",
+      "trust": 0.55
+    },
+    {
+      "merchant_id": "m_trader_charge",
+      "trust": 0.6
+    },
+    {
+      "merchant_id": "m_factory_leather",
+      "trust": 0.7
+    },
+    {
+      "merchant_id": "m_trader_general",
+      "trust": 0.4
+    }
+  ]
+}

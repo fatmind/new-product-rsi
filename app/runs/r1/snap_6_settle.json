@@ -1,0 +1,47 @@
+{
+  "round": "r1",
+  "dispatched": 3,
+  "published": 3,
+  "broke_zero": 2,
+  "zero_break_rate": 0.6667,
+  "products": [
+    {
+      "product_id": "prod_comfort_nylon_band_m_trader_deco",
+      "cluster_id": "comfort_nylon_band",
+      "merchant_id": "m_trader_deco",
+      "price": 12.9,
+      "subsidy": 2,
+      "sales_7d": 5
+    },
+    {
+      "product_id": "prod_sport_loop_band_m_trader_deco",
+      "cluster_id": "sport_loop_band",
+      "merchant_id": "m_trader_deco",
+      "price": 14.9,
+      "subsidy": 3.45,
+      "sales_7d": 6
+    },
+    {
+      "product_id": "prod_kids_band_m_premium_boutique",
+      "cluster_id": "kids_band",
+      "merchant_id": "m_premium_boutique",
+      "price": 12.9,
+      "subsidy": 1.5,
+      "sales_7d": 4
+    }
+  ],
+  "trust_updates": [
+    {
+      "merchant_id": "m_premium_boutique",
+      "before": 0.7,
+      "after": 0.6,
+      "why": "发的品未破零"
+    },
+    {
+      "merchant_id": "m_trader_deco",
+      "before": 0.65,
+      "after": 0.75,
+      "why": "发的品破零"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "selection_cards": [
+    {
+      "card_id": "card_comfort_nylon_band",
+      "cluster_id": "comfort_nylon_band",
+      "verdict": "推",
+      "reason": "舒适尼龙表带在菲律宾的需求和销量都在涨（竞对平台周销量从150多涨到350多，搜索热度同步上升），我们平台有人看但一单都没有——想买的顾客来了买不到；印尼销量也在涨。8-15美元在竞对验证过的价位内，建议上架。但新加坡和印尼的搜索热度最近略有回落，别一次备太多货。",
+      "confidence": 0.62
+    },
+    {
+      "card_id": "card_sport_loop_band",
+      "cluster_id": "sport_loop_band",
+      "verdict": "推",
+      "reason": "运动织带是本期最明确的机会：印尼、新加坡、菲律宾三个市场的竞对销量都翻了好几倍（印尼从每周73涨到328，菲律宾从48涨到239），搜索热度同步大涨，说明需求真实且在快速放大；我们平台浏览量也在涨却一单都卖不出——顾客来了买不到。9-16美元定价在竞对已验证的价位内，建议重点发品。",
+      "confidence": 0.9
+    },
+    {
+      "card_id": "card_kids_band",
+      "cluster_id": "kids_band",
+      "verdict": "推",
+      "reason": "儿童小码表带在菲律宾的需求稳步上涨：竞对销量从每周73涨到138，搜索热度也在升，我们平台菲律宾浏览量高但同样没有订单，有明确的供给缺口。印尼、新加坡需求平稳。可以发，主要押菲律宾，别对印尼新加坡抱太高预期。",
+      "confidence": 0.58
+    },
+    {
+      "card_id": "card_charging_dock",
+      "cluster_id": "charging_dock",
+      "verdict": "不推",
+      "reason": "充电底座几乎没人要：竞对平台每周只卖2-5件，搜索热度还一路往下走；而且官方本来就随表送充电线，再花钱买底座的人很少，卖点弱、单价又高（15-25美元），发出来大概率卖不动。",
+      "confidence": 0.85
+    },
+    {
+      "card_id": "card_screen_protector",
+      "cluster_id": "screen_protector",
+      "verdict": "不推",
+      "reason": "屏幕保护膜需求确实大，但我们平台已经有商家在卖、每周都有稳定订单，不缺供给；竞对平台的销量也进入平台期不再增长。这是已经做起来的存量生意，不是新机会，现在进场要和已有卖家抢订单，不建议推。",
+      "confidence": 0.6
+    },
+    {
+      "card_id": "card_silicone_case_sport",
+      "cluster_id": "silicone_case_sport",
+      "verdict": "不推",
+      "reason": "运动硅胶壳看着热闹：搜索热度在涨、我们平台也有人看没订单，但竞对平台的销量在持续下滑（印尼从每周37件掉到23件，菲律宾从36件掉到20件）——热度还没变成真金白银的购买，需求没被验证，现在发品风险大，建议再观察一期。",
+      "confidence": 0.55
+    },
+    {
+      "card_id": "card_cleaning_kit",
+      "cluster_id": "cleaning_kit",
+      "verdict": "不推",
+      "reason": "清洁套装的需求信号几乎为零：竞对每周只卖三四件，搜索热度常年很低，属于可买可不买的低频耗材，发出来很难有人下单。",
+      "confidence": 0.82
+    },
+    {
+      "card_id": "card_travel_case",
+      "cluster_id": "travel_case",
+      "verdict": "不推",
+      "reason": "收纳盒同样没有任何需求信号：竞对每周只卖个位数，搜索热度极低，本身使用频次就低，不值得发品。",
+      "confidence": 0.82
+    }
+  ]
+}

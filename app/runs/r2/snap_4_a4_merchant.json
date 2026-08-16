@@ -1,0 +1,94 @@
+{
+  "merchant_decisions": [
+    {
+      "merchant_id": "m_factory_leather",
+      "package_id": "pkg_premium_metal_band",
+      "publish": false,
+      "why": "金属表带要金属加工产线，我只有皮具产线，工艺完全不沾边，补贴再多也做不了"
+    },
+    {
+      "merchant_id": "m_factory_leather",
+      "package_id": "pkg_comfort_nylon_band",
+      "publish": true,
+      "why": "尼龙织带和我做皮表带的裁剪缝制工艺相近，菲律宾需求在涨，10美元定价不高可以试"
+    },
+    {
+      "merchant_id": "m_factory_leather",
+      "package_id": "pkg_sport_loop_band",
+      "publish": true,
+      "why": "三个市场都在翻倍涨、平台缺口最大，织带缝制我也能上手，这轮最看好它"
+    },
+    {
+      "merchant_id": "m_factory_leather",
+      "package_id": "pkg_screen_protector",
+      "publish": false,
+      "why": "钢化膜是玻璃贴片，跟皮具产线完全不搭，没有设备和工人做不了"
+    },
+    {
+      "merchant_id": "m_factory_silicone",
+      "package_id": "pkg_premium_metal_band",
+      "publish": false,
+      "why": "我是做硅胶和手机壳的厂，不锈钢米兰尼斯表带是金属加工活，我没有这条产线，理由再漂亮也做不出来"
+    },
+    {
+      "merchant_id": "m_factory_silicone",
+      "package_id": "pkg_screen_protector",
+      "publish": false,
+      "why": "钢化膜是玻璃工艺、水凝膜是薄膜工艺，都跟我硅胶产线不沾边，补贴再足我也没机器生产"
+    },
+    {
+      "merchant_id": "m_trader_general",
+      "package_id": "pkg_premium_metal_band",
+      "publish": true,
+      "why": "表带算百货品类我拿得到货，三个市场都在涨又有补贴，值得试"
+    },
+    {
+      "merchant_id": "m_trader_general",
+      "package_id": "pkg_screen_protector",
+      "publish": true,
+      "why": "钢化膜人人要换、进价才几块钱，走量品不压资金，综合百货搭着卖刚好"
+    }
+  ],
+  "products": [
+    {
+      "product_id": "prod_comfort_nylon_band_m_factory_leather",
+      "cluster_id": "comfort_nylon_band",
+      "attrs": "尼龙编织表带，多色可换，轻软透气，适合细手腕日常佩戴",
+      "price": 10,
+      "subsidy": 3,
+      "merchant_id": "m_factory_leather",
+      "gmt_create": "2026-08-14 14:15:18",
+      "sales_7d": null
+    },
+    {
+      "product_id": "prod_sport_loop_band_m_factory_leather",
+      "cluster_id": "sport_loop_band",
+      "attrs": "回环式弹性织物表带，魔术贴调节，轻透排汗，运动通勤两用",
+      "price": 11.5,
+      "subsidy": 2.5,
+      "merchant_id": "m_factory_leather",
+      "gmt_create": "2026-08-14 14:15:18",
+      "sales_7d": null
+    },
+    {
+      "product_id": "prod_premium_metal_band_m_trader_general",
+      "cluster_id": "premium_metal_band",
+      "attrs": "不锈钢米兰尼斯编织表带，银色，商务简约风格",
+      "price": 42.99,
+      "subsidy": 12,
+      "merchant_id": "m_trader_general",
+      "gmt_create": "2026-08-14 14:16:11",
+      "sales_7d": null
+    },
+    {
+      "product_id": "prod_screen_protector_m_trader_general",
+      "cluster_id": "screen_protector",
+      "attrs": "钢化膜，透明高透，防刮，通用型",
+      "price": 4.99,
+      "subsidy": 1.05,
+      "merchant_id": "m_trader_general",
+      "gmt_create": "2026-08-14 14:16:11",
+      "sales_7d": null
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "round": "r4",
+  "dispatched": 2,
+  "published": 2,
+  "broke_zero": 1,
+  "zero_break_rate": 0.5,
+  "products": [
+    {
+      "product_id": "prod_armband_m_trader_wearable",
+      "cluster_id": "armband",
+      "merchant_id": "m_trader_wearable",
+      "price": 16.9,
+      "subsidy": 3,
+      "sales_7d": 10
+    },
+    {
+      "product_id": "prod_magnetic_buckle_m_trader_wearable",
+      "cluster_id": "magnetic_buckle",
+      "merchant_id": "m_trader_wearable",
+      "price": 9,
+      "subsidy": 2.1,
+      "sales_7d": 1
+    }
+  ],
+  "trust_updates": [
+    {
+      "merchant_id": "m_trader_wearable",
+      "before": 0.6,
+      "after": 0.7,
+      "why": "发的品破零"
+    }
+  ]
+}

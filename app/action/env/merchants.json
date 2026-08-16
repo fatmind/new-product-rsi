@@ -1,0 +1,115 @@
+{
+  "_comment": "商家画像（环境内部状态，不给优化侧看）。type/top_categories/monthly_gmv/trust_init 定死；trust 是唯一运行态可变字段（flow 结算后就地更新），reset 时从 trust_init 还原。10 家覆盖不同类型/主营/规模，长尾品类也有对口商家。",
+  "merchants": [
+    {
+      "merchant_id": "m_trader_wearable",
+      "type": "贸易型",
+      "top_categories": [
+        "智能手表配件",
+        "手机壳"
+      ],
+      "monthly_gmv": 80000,
+      "trust_init": 0.7,
+      "trust": 0.7
+    },
+    {
+      "merchant_id": "m_factory_strap",
+      "type": "工厂型",
+      "top_categories": [
+        "表带",
+        "腕带"
+      ],
+      "monthly_gmv": 150000,
+      "trust_init": 0.6,
+      "trust": 0.6
+    },
+    {
+      "merchant_id": "m_premium_boutique",
+      "type": "贸易型",
+      "top_categories": [
+        "轻奢配饰",
+        "皮具表带"
+      ],
+      "monthly_gmv": 200000,
+      "trust_init": 0.7,
+      "trust": 0.6
+    },
+    {
+      "merchant_id": "m_trader_deco",
+      "type": "贸易型",
+      "top_categories": [
+        "手机挂饰",
+        "饰品配件"
+      ],
+      "monthly_gmv": 30000,
+      "trust_init": 0.65,
+      "trust": 0.85
+    },
+    {
+      "merchant_id": "m_trader_3c",
+      "type": "贸易型",
+      "top_categories": [
+        "蓝牙耳机",
+        "充电器"
+      ],
+      "monthly_gmv": 50000,
+      "trust_init": 0.5,
+      "trust": 0.5
+    },
+    {
+      "merchant_id": "m_factory_silicone",
+      "type": "工厂型",
+      "top_categories": [
+        "硅胶制品",
+        "手机保护壳"
+      ],
+      "monthly_gmv": 120000,
+      "trust_init": 0.55,
+      "trust": 0.55
+    },
+    {
+      "merchant_id": "m_trader_sport",
+      "type": "贸易型",
+      "top_categories": [
+        "运动户外配件",
+        "健身小器材"
+      ],
+      "monthly_gmv": 60000,
+      "trust_init": 0.65,
+      "trust": 0.45
+    },
+    {
+      "merchant_id": "m_trader_charge",
+      "type": "贸易型",
+      "top_categories": [
+        "充电配件",
+        "数据线"
+      ],
+      "monthly_gmv": 40000,
+      "trust_init": 0.6,
+      "trust": 0.6
+    },
+    {
+      "merchant_id": "m_factory_leather",
+      "type": "工厂型",
+      "top_categories": [
+        "皮具",
+        "皮表带"
+      ],
+      "monthly_gmv": 90000,
+      "trust_init": 0.6,
+      "trust": 0.6
+    },
+    {
+      "merchant_id": "m_trader_general",
+      "type": "贸易型",
+      "top_categories": [
+        "综合百货",
+        "家居小件"
+      ],
+      "monthly_gmv": 25000,
+      "trust_init": 0.5,
+      "trust": 0.5
+    }
+  ]
+}

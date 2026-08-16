@@ -1,0 +1,194 @@
+[
+  {
+    "cluster_id": "armband",
+    "price_range": {
+      "min": 10,
+      "max": 20
+    },
+    "attrs": "臂带:上臂佩戴的运动臂带，透气织物/硅胶，黑灰为主，跑步/健身场景，解决手腕出汗碍事"
+  },
+  {
+    "cluster_id": "ankle_band",
+    "price_range": {
+      "min": 10,
+      "max": 20
+    },
+    "attrs": "脚踝带:脚踝佩戴带，弹性织物，睡眠监测和骑行场景，不占手腕"
+  },
+  {
+    "cluster_id": "premium_metal_band",
+    "price_range": {
+      "min": 25,
+      "max": 60
+    },
+    "attrs": "高档金属表带:不锈钢/米兰尼斯编织，银色/黑色，商务正式风，质感耐看"
+  },
+  {
+    "cluster_id": "comfort_nylon_band",
+    "price_range": {
+      "min": 8,
+      "max": 15
+    },
+    "attrs": "舒适尼龙表带:尼龙编织，轻软透气，多色可换，适合细手腕日常佩戴"
+  },
+  {
+    "cluster_id": "sport_loop_band",
+    "price_range": {
+      "min": 9,
+      "max": 16
+    },
+    "attrs": "运动织带:回环式弹性织物表带，魔术贴调节，轻透排汗，运动通勤两用"
+  },
+  {
+    "cluster_id": "kids_band",
+    "price_range": {
+      "min": 7,
+      "max": 13
+    },
+    "attrs": "儿童小码表带:小码硅胶表带，卡通配色，防丢设计，家长买给孩子"
+  },
+  {
+    "cluster_id": "deco_charm",
+    "price_range": {
+      "min": 5,
+      "max": 10
+    },
+    "attrs": "装饰小件:表体贴片/挂饰/彩色装饰环，塑料树脂材质，晒图好看，实用性弱、易脱落"
+  },
+  {
+    "cluster_id": "bling_case",
+    "price_range": {
+      "min": 6,
+      "max": 12
+    },
+    "attrs": "水钻保护壳:塑料镶水钻表框壳，亮闪风格，上镜好看，偏重、易掉钻发黄"
+  },
+  {
+    "cluster_id": "charging_dock",
+    "price_range": {
+      "min": 15,
+      "max": 25
+    },
+    "attrs": "充电底座:立式充电支架底座，兼容性一般，官方已随表配充电线"
+  },
+  {
+    "cluster_id": "screen_protector",
+    "price_range": {
+      "min": 3,
+      "max": 6
+    },
+    "attrs": "屏幕保护膜:钢化膜/水凝膜，透明，防刮，低单价高走量"
+  },
+  {
+    "cluster_id": "cheap_strap_basic",
+    "price_range": {
+      "min": 7,
+      "max": 10
+    },
+    "attrs": "基础素色表带:TPU 软胶，黑白灰素色，无差异基础款，胜在便宜耐用"
+  },
+  {
+    "cluster_id": "magnetic_buckle",
+    "price_range": {
+      "min": 6,
+      "max": 12
+    },
+    "attrs": "磁吸快拆扣:磁吸式表带快拆转接扣，金属件，换带免工具，新周边品类"
+  },
+  {
+    "cluster_id": "silicone_case_sport",
+    "price_range": {
+      "min": 6,
+      "max": 12
+    },
+    "attrs": "运动硅胶保护壳:软胶包边表体壳，防摔防刮，运动场景，黑灰蓝三色"
+  },
+  {
+    "cluster_id": "leather_band_classic",
+    "price_range": {
+      "min": 15,
+      "max": 28
+    },
+    "attrs": "经典皮表带:头层牛皮，棕黑两色，商务休闲通用，佩戴需磨合"
+  },
+  {
+    "cluster_id": "metal_bezel_ring",
+    "price_range": {
+      "min": 8,
+      "max": 14
+    },
+    "attrs": "金属表圈:铝合金装饰保护圈，多色电镀，防刮兼装饰，安装免工具"
+  },
+  {
+    "cluster_id": "strap_charms_diy",
+    "price_range": {
+      "min": 4,
+      "max": 9
+    },
+    "attrs": "DIY串珠挂饰:表带装饰串珠字母珠，跟风社媒教程，新鲜劲短、复购差"
+  },
+  {
+    "cluster_id": "solar_charger_clip",
+    "price_range": {
+      "min": 12,
+      "max": 20
+    },
+    "attrs": "太阳能充电夹:夹在表带上的太阳能补电片，充电效率低，概念大于实用"
+  },
+  {
+    "cluster_id": "sticker_skin",
+    "price_range": {
+      "min": 2,
+      "max": 4
+    },
+    "attrs": "表盘贴纸:装饰贴膜贴纸，图案多，低价小件，需求零散"
+  },
+  {
+    "cluster_id": "cleaning_kit",
+    "price_range": {
+      "min": 4,
+      "max": 8
+    },
+    "attrs": "清洁套装:表带表体清洁刷+清洁液，低频耗材，可买可不买"
+  },
+  {
+    "cluster_id": "watch_stand",
+    "price_range": {
+      "min": 8,
+      "max": 15
+    },
+    "attrs": "床头支架:桌面摆台支架，免打孔，小众装饰摆件"
+  },
+  {
+    "cluster_id": "travel_case",
+    "price_range": {
+      "min": 6,
+      "max": 12
+    },
+    "attrs": "收纳盒:硬壳收纳包，装表和配件，出行便携，使用频次低"
+  },
+  {
+    "cluster_id": "strap_extender",
+    "price_range": {
+      "min": 3,
+      "max": 6
+    },
+    "attrs": "加长带扣:表带加长延长扣，适配粗手腕，需求极细分"
+  },
+  {
+    "cluster_id": "cable_organizer",
+    "price_range": {
+      "min": 2,
+      "max": 5
+    },
+    "attrs": "充电线收纳:理线夹绕线器，通用小件，几乎没有专属需求"
+  },
+  {
+    "cluster_id": "screen_cleaner_pen",
+    "price_range": {
+      "min": 2,
+      "max": 5
+    },
+    "attrs": "屏幕清洁笔:表盘清洁笔头+纤维布两用，极低频耗材"
+  }
+]

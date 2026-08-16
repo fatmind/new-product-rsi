@@ -1,0 +1,53 @@
+{
+  "round": "r5",
+  "dispatched": 3,
+  "published": 3,
+  "broke_zero": 1,
+  "zero_break_rate": 0.3333,
+  "products": [
+    {
+      "product_id": "prod_leather_band_classic_m_factory_leather",
+      "cluster_id": "leather_band_classic",
+      "merchant_id": "m_factory_leather",
+      "price": 19,
+      "subsidy": 3,
+      "sales_7d": 0
+    },
+    {
+      "product_id": "prod_comfort_nylon_band_m_trader_general",
+      "cluster_id": "comfort_nylon_band",
+      "merchant_id": "m_trader_general",
+      "price": 12.99,
+      "subsidy": 2.5,
+      "sales_7d": 5
+    },
+    {
+      "product_id": "prod_kids_band_m_trader_sport",
+      "cluster_id": "kids_band",
+      "merchant_id": "m_trader_sport",
+      "price": 8.99,
+      "subsidy": 2,
+      "sales_7d": 1
+    }
+  ],
+  "trust_updates": [
+    {
+      "merchant_id": "m_trader_sport",
+      "before": 0.55,
+      "after": 0.45,
+      "why": "发的品未破零"
+    },
+    {
+      "merchant_id": "m_factory_leather",
+      "before": 0.7,
+      "after": 0.6,
+      "why": "发的品未破零"
+    },
+    {
+      "merchant_id": "m_trader_general",
+      "before": 0.4,
+      "after": 0.5,
+      "why": "发的品破零"
+    }
+  ]
+}

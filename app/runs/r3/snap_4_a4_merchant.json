@@ -1,0 +1,106 @@
+{
+  "merchant_decisions": [
+    {
+      "merchant_id": "m_trader_deco",
+      "package_id": "pkg_premium_metal_band",
+      "publish": true,
+      "why": "金属表带新加坡白领市场是真空档，我本身做饰品配件客群搭得上，补贴也够，值得试"
+    },
+    {
+      "merchant_id": "m_trader_deco",
+      "package_id": "pkg_comfort_nylon_band",
+      "publish": true,
+      "why": "菲律宾尼龙表带走量大又稳，价位低不压资金，试新品风险小"
+    },
+    {
+      "merchant_id": "m_trader_deco",
+      "package_id": "pkg_kids_band",
+      "publish": false,
+      "why": "儿童表带面向的是家长人群，和我做饰品配件的人群不搭，不熟不碰"
+    },
+    {
+      "merchant_id": "m_trader_deco",
+      "package_id": "pkg_leather_band_classic",
+      "publish": false,
+      "why": "一轮最多上两个，金属和尼龙两个方向我更看好，皮表带先放着"
+    },
+    {
+      "merchant_id": "m_trader_sport",
+      "package_id": "pkg_kids_band",
+      "publish": true,
+      "why": "儿童小码表带和运动户外配件沾边，贸易型能进货，数据说平台有流量缺口，值得试"
+    },
+    {
+      "merchant_id": "m_trader_sport",
+      "package_id": "pkg_leather_band_classic",
+      "publish": false,
+      "why": "经典皮表带偏商务正装，和我主营的运动户外、健身不搭边，没有靠谱货源"
+    },
+    {
+      "merchant_id": "m_factory_silicone",
+      "package_id": "pkg_leather_band_classic",
+      "publish": false,
+      "why": "我是做硅胶和手机壳的工厂，没有皮具产线和工人，做不了皮表带"
+    },
+    {
+      "merchant_id": "m_factory_strap",
+      "package_id": "pkg_leather_band_classic",
+      "publish": false,
+      "why": "皮表带是皮具工艺（裁皮缝线），我们产线做不了，没这产线和工人，补贴再大也不接"
+    },
+    {
+      "merchant_id": "m_trader_charge",
+      "package_id": "pkg_leather_band_classic",
+      "publish": false,
+      "why": "我是卖充电器、数据线的，皮表带跟我的货完全不沾边，没货源也没把握控质量，再补贴也不敢上"
+    },
+    {
+      "merchant_id": "m_trader_wearable",
+      "package_id": "pkg_leather_band_classic",
+      "publish": true,
+      "why": "皮表带正好是我主营的智能手表配件，货源够得着；新加坡那边搜索和竞对都在涨、平台还零成交，定价 24 有补贴顶着，值得上一个试试"
+    }
+  ],
+  "products": [
+    {
+      "product_id": "prod_premium_metal_band_m_trader_deco",
+      "cluster_id": "premium_metal_band",
+      "attrs": "不锈钢米兰尼斯编织表带，银色，商务正式风，质感耐看",
+      "price": 45,
+      "subsidy": 13.5,
+      "merchant_id": "m_trader_deco",
+      "gmt_create": "2026-08-14 14:36:09",
+      "sales_7d": null
+    },
+    {
+      "product_id": "prod_comfort_nylon_band_m_trader_deco",
+      "cluster_id": "comfort_nylon_band",
+      "attrs": "尼龙编织表带，多色可选，轻软透气，适合日常佩戴",
+      "price": 12,
+      "subsidy": 2,
+      "merchant_id": "m_trader_deco",
+      "gmt_create": "2026-08-14 14:36:09",
+      "sales_7d": null
+    },
+    {
+      "product_id": "prod_kids_band_m_trader_sport",
+      "cluster_id": "kids_band",
+      "attrs": "儿童硅胶表带，卡通彩配色，防丢扣设计，适合儿童手腕佩戴",
+      "price": 12.9,
+      "subsidy": 2.7,
+      "merchant_id": "m_trader_sport",
+      "gmt_create": "2026-08-14 14:36:30",
+      "sales_7d": null
+    },
+    {
+      "product_id": "prod_leather_band_classic_m_trader_wearable",
+      "cluster_id": "leather_band_classic",
+      "attrs": "头层牛皮经典皮表带，棕黑两色，商务休闲通用",
+      "price": 24,
+      "subsidy": 5.7,
+      "merchant_id": "m_trader_wearable",
+      "gmt_create": "2026-08-14 14:37:26",
+      "sales_7d": null
+    }
+  ]
+}

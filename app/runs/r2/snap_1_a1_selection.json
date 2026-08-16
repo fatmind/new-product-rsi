@@ -1,0 +1,60 @@
+{
+  "selection_cards": [
+    {
+      "card_id": "card_premium_metal_band",
+      "cluster_id": "premium_metal_band",
+      "verdict": "推",
+      "reason": "这款金属表带三个市场都在涨——新加坡白领搜索热度翻了一倍、印尼和菲律宾也明显增长，竞对平台销量同步拉升；而我们平台上每周有上千人在搜但一单都买不到，缺口非常大。买它的人主要是运动健身人群和白领，需求实在，不是凑热闹。价格区间和竞对持平，商家按市场价发品就能接住需求。",
+      "confidence": 0.9
+    },
+    {
+      "card_id": "card_comfort_nylon_band",
+      "cluster_id": "comfort_nylon_band",
+      "verdict": "推",
+      "reason": "菲律宾市场很强——学生群体搜索热度稳定在高位，竞对销量也在涨，我们平台每周近千流量但零供给。不过印尼和新加坡的搜索兴趣在慢慢退烧，这两个市场需求有点后劲不足。整体来看菲律宾撑得起，但风险是只靠一国市场，抗波动能力弱一点。价位和竞对差不多，值得试试。",
+      "confidence": 0.6
+    },
+    {
+      "card_id": "card_sport_loop_band",
+      "cluster_id": "sport_loop_band",
+      "verdict": "推",
+      "reason": "三个市场全面开花——印尼、新加坡、菲律宾的搜索热度和竞对销量都在翻倍增长，没有任何一个市场掉队。运动健身人群和学生是主力，需求实实在在。我们平台每周几千流量但零供给，这个缺口是这轮候选里最确定的。价位和竞对完全重叠，商家按市场价发品，破零跑量确定性很高。",
+      "confidence": 0.95
+    },
+    {
+      "card_id": "card_screen_protector",
+      "cluster_id": "screen_protector",
+      "verdict": "推",
+      "reason": "钢化膜是稳定走量的品类——竞对每月走量很大，我们平台也有少量订单，但流量是订单量的几百倍，说明供给远没饱和。不过印尼的搜索热度在持续下滑，需求不再增长，这是个成熟品类而不是爆发期。好处是单价低、人人必买，只要价格对标竞对（2-5美元），破零确定性高，但不是惊喜型新星。",
+      "confidence": 0.65
+    },
+    {
+      "card_id": "card_silicone_case_sport",
+      "cluster_id": "silicone_case_sport",
+      "verdict": "不推",
+      "reason": "看着需求在涨，但竞对三个市场的销量反而都在跌——说明搜的人还没变成买的人，热度是虚的。而且我们平台上对这个品的兴趣也不算大。现在进场太早了，等竞对销量真涨起来再跟不迟。",
+      "confidence": 0.85
+    },
+    {
+      "card_id": "card_cleaning_kit",
+      "cluster_id": "cleaning_kit",
+      "verdict": "不推",
+      "reason": "搜索热度很低（每周几十次），竞对也就卖三四单，我们平台每周也就几十个人看——量级和其他候选完全不是一个档次。清洁套装属于可买可不买的东西，需求撑不起稳定破零，不推荐商家花精力。",
+      "confidence": 0.9
+    },
+    {
+      "card_id": "card_watch_stand",
+      "cluster_id": "watch_stand",
+      "verdict": "不推",
+      "reason": "床头支架是小众装饰品——搜索热度很低，竞对每周只卖两三单，我们平台每周也就几十个浏览。量级和其他候选差太远了。需求撑不起新品破零，不值得投入。",
+      "confidence": 0.9
+    },
+    {
+      "card_id": "card_strap_extender",
+      "cluster_id": "strap_extender",
+      "verdict": "不推",
+      "reason": "加长扣的需求太细分了——三个市场搜索热度都很低，竞对几乎不走量，我们平台基本没什么人看。同轮其他候选的量级是这个的几十倍，发这个品几乎没有破零的可能。",
+      "confidence": 0.95
+    }
+  ]
+}

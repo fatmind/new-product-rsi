@@ -1,0 +1,60 @@
+{
+  "selection_cards": [
+    {
+      "card_id": "card_premium_metal_band",
+      "cluster_id": "premium_metal_band",
+      "verdict": "不推",
+      "reason": "金属表带单价太高（25-60美元），虽然搜索热度、竞对销量都在涨，但这是高价品，我们平台买这个价位的人少，买家盘撑不起稳定订单，发了容易压货卖不动。",
+      "confidence": 0.75
+    },
+    {
+      "card_id": "card_comfort_nylon_band",
+      "cluster_id": "comfort_nylon_band",
+      "verdict": "推",
+      "reason": "尼龙表带便宜（8-15美元），需求实在：菲律宾搜索量翻倍、竞对每周卖300多单还在涨，我们平台学生人群每周上千流量却一单没有，明显是有人想买没人卖；价格和外面卖的一个档位，发出去有人买。",
+      "confidence": 0.9
+    },
+    {
+      "card_id": "card_kids_band",
+      "cluster_id": "kids_band",
+      "verdict": "推",
+      "reason": "儿童表带价格低（7-13美元，和竞对价位一样），菲律宾需求在涨：搜索和竞对销量都往上走，我们平台学生/家长流量不小但零供给，是空出来的需求，值得发。",
+      "confidence": 0.65
+    },
+    {
+      "card_id": "card_silicone_case_sport",
+      "cluster_id": "silicone_case_sport",
+      "verdict": "不推",
+      "reason": "硅胶壳的搜索热度在涨，但竞对平台的销量三个市场全在跌（印尼从37掉到23、菲律宾从36掉到20），说明热度还没变成真购买，现在进场是提前押注，容易白忙活。",
+      "confidence": 0.85
+    },
+    {
+      "card_id": "card_leather_band_classic",
+      "cluster_id": "leather_band_classic",
+      "verdict": "推",
+      "reason": "皮表带价格适中（15-28美元，和竞对价位重叠），新加坡市场最扎实：搜索量、竞对销量都在涨，我们平台白领人群每周四五百流量却零供给，单靠这个市场也够卖，值得试。",
+      "confidence": 0.6
+    },
+    {
+      "card_id": "card_strap_charms_diy",
+      "cluster_id": "strap_charms_diy",
+      "verdict": "不推",
+      "reason": "串珠挂饰是社媒跟风款：聊的人多，但真去搜的人少，竞对一周才卖几单，我们平台看的人多（每周几千流量）几乎没人下单——这种新鲜劲短、复购差的品撑不起稳定订单。",
+      "confidence": 0.9
+    },
+    {
+      "card_id": "card_sticker_skin",
+      "cluster_id": "sticker_skin",
+      "verdict": "不推",
+      "reason": "表盘贴纸太小众：搜索量、竞对销量、我们平台流量全部小得可怜（各市场每周个位数到百来流量），需求零散，发出去基本没人买，量撑不起破零。",
+      "confidence": 0.9
+    },
+    {
+      "card_id": "card_cleaning_kit",
+      "cluster_id": "cleaning_kit",
+      "verdict": "不推",
+      "reason": "清洁套装是低频可买可不买的东西：竞对一周才卖3-4单，我们平台也没多少人找，需求太小，发了也凑不够订单，不值得占一个发品名额。",
+      "confidence": 0.9
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "products_with_sales": [
+    {
+      "product_id": "prod_leather_band_classic_m_factory_leather",
+      "cluster_id": "leather_band_classic",
+      "attrs": "头层牛皮，棕黑两色可选，商务休闲通用款",
+      "price": 19,
+      "subsidy": 3,
+      "merchant_id": "m_factory_leather",
+      "gmt_create": "2026-08-14 14:57:33",
+      "sales_7d": 0
+    },
+    {
+      "product_id": "prod_comfort_nylon_band_m_trader_general",
+      "cluster_id": "comfort_nylon_band",
+      "attrs": "尼龙编织细款表带，多色可选，轻软透气，适合日常佩戴",
+      "price": 12.99,
+      "subsidy": 2.5,
+      "merchant_id": "m_trader_general",
+      "gmt_create": "2026-08-14 14:58:00",
+      "sales_7d": 5
+    },
+    {
+      "product_id": "prod_kids_band_m_trader_sport",
+      "cluster_id": "kids_band",
+      "attrs": "卡通配色硅胶儿童小码表带，防丢扣设计，适合6-12岁孩子手腕",
+      "price": 8.99,
+      "subsidy": 2,
+      "merchant_id": "m_trader_sport",
+      "gmt_create": "2026-08-14 14:58:14",
+      "sales_7d": 1
+    }
+  ],
+  "sales_by_group": {
+    "prod_leather_band_classic_m_factory_leather": {
+      "sport_fitness": 0,
+      "commuter_whitecollar": 0,
+      "young_student": 0,
+      "onlooker": 0,
+      "discount_hunter": 0
+    },
+    "prod_comfort_nylon_band_m_trader_general": {
+      "sport_fitness": 1,
+      "commuter_whitecollar": 0,
+      "young_student": 4,
+      "onlooker": 0,
+      "discount_hunter": 0
+    },
+    "prod_kids_band_m_trader_sport": {
+      "sport_fitness": 0,
+      "commuter_whitecollar": 0,
+      "young_student": 1,
+      "onlooker": 0,
+      "discount_hunter": 0
+    }
+  }
+}

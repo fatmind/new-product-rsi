@@ -1,0 +1,40 @@
+{
+  "products_with_sales": [
+    {
+      "product_id": "prod_armband_m_trader_wearable",
+      "cluster_id": "armband",
+      "attrs": "黑色透气织物上臂运动臂带，硅胶防滑内衬，灰黑简约配色，跑步/健身场景",
+      "price": 16.9,
+      "subsidy": 3,
+      "merchant_id": "m_trader_wearable",
+      "gmt_create": "2026-08-14 14:48:56",
+      "sales_7d": 10
+    },
+    {
+      "product_id": "prod_magnetic_buckle_m_trader_wearable",
+      "cluster_id": "magnetic_buckle",
+      "attrs": "金属磁吸快拆转接扣，银色/黑色可选，免工具换表带，适配主流智能手表表带",
+      "price": 9,
+      "subsidy": 2.1,
+      "merchant_id": "m_trader_wearable",
+      "gmt_create": "2026-08-14 14:48:56",
+      "sales_7d": 1
+    }
+  ],
+  "sales_by_group": {
+    "prod_armband_m_trader_wearable": {
+      "sport_fitness": 7,
+      "commuter_whitecollar": 0,
+      "young_student": 3,
+      "onlooker": 0,
+      "discount_hunter": 0
+    },
+    "prod_magnetic_buckle_m_trader_wearable": {
+      "sport_fitness": 0,
+      "commuter_whitecollar": 0,
+      "young_student": 1,
+      "onlooker": 0,
+      "discount_hunter": 0
+    }
+  }
+}
