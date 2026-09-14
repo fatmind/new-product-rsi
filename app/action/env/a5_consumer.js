@@ -11,20 +11,10 @@ import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { callLLMJson } from '../../llm/qodercli.js';
 import { contract } from '../abstract/a5_consumer.js';
+import { competitorMid } from '../../lib/market.js';
 
 const ENV_DIR = new URL('.', import.meta.url).pathname;
 const APP_DIR = new URL('../..', import.meta.url).pathname;
-
-// 该簇竞对价格带中点的中位数（消费者心里的市场行情）；无竞对数据返回 null（没得比）
-function competitorMid(offSiteSales, clusterId) {
-  const mids = offSiteSales
-    .filter((r) => r.cluster_id === clusterId)
-    .map((r) => (r.price_band.min + r.price_band.max) / 2)
-    .sort((a, b) => a - b);
-  if (mids.length === 0) return null;
-  const i = Math.floor(mids.length / 2);
-  return mids.length % 2 ? mids[i] : (mids[i - 1] + mids[i]) / 2;
-}
 
 function coefPrompt(groups, product, payPrice, marketRef) {
   // 消费者能看到的：品本身（attrs / 实付价）+ 市场行情（竞对同类品卖多少钱，真实世界里会货比三家）

@@ -43,6 +43,16 @@ function panelHTML(node) {
     </div>`;
 }
 
+function attributionHTML(t) {
+  if (!t) return '<p class="panel-lead">该轮无归因裁据表（老轮次未当场计算，可运行自迭代补算后重出报告）。</p>';
+  const rows = t.rows.map((r) => `<tr>${r.map((c) => `<td>${c}</td>`).join('')}</tr>`).join('');
+  const head = t.head.map((h) => `<th>${esc(h)}</th>`).join('');
+  return `<div class="table-scroll"><table>
+    <thead><tr>${head}</tr></thead>
+    <tbody>${rows}</tbody></table></div>
+    <p class="panel-lead">归因是确定性裁据（排除思路）：把「没破零」定位到某一段，不等于判定该推/该不推；裁据定位是代理指标，最终该不该推仍由选品研判探索决定。</p>`;
+}
+
 function outcomesTable(outcomes) {
   const rows = outcomes.map((o) => `<tr>
       <td>${esc(o.cluster)}</td>
@@ -67,6 +77,8 @@ function render() {
       <ul class="alerts" data-alerts style="margin-top:calc(var(--u)*1.2)"></ul>
       <p class="label" style="margin-top:calc(var(--u)*2.4)">全链路结局 <span>一行一簇：选品 → 激励 → 商家 → 破零（选品对错以真值评，只进报告）</span></p>
       <div data-outcomes style="margin-top:calc(var(--u)*1.2)"></div>
+      <p class="label" style="margin-top:calc(var(--u)*2.4)">归因裁据表 <span>没破零的簇，被确定性剪枝裁到哪一段（业务可见，非答案）</span></p>
+      <div data-attribution style="margin-top:calc(var(--u)*1.2)"></div>
       <div class="rail-nodes" role="tablist" aria-label="链路节点" data-nodebar></div>
       <div data-panel></div>
     </div>`;
@@ -77,6 +89,7 @@ function render() {
   const outcomesBox = mount.querySelector('[data-outcomes]');
   const nodeBar = mount.querySelector('[data-nodebar]');
   const panelBox = mount.querySelector('[data-panel]');
+  const attributionBox = mount.querySelector('[data-attribution]');
   let curRound = 0;
 
   const showNode = (ni) => {
@@ -91,6 +104,7 @@ function render() {
     alertBox.innerHTML = r.alerts.map((a) => `<li>${esc(a)}</li>`).join('') || '<li>本轮模拟过程没有发现明显失真</li>';
     packBox.textContent = `· ${r.id} 使用 ${r.pack}${r.candidates?.length ? ` · 本期从 ${r.poolSize} 簇池圈选 ${r.candidates.length} 个候选` : ''}`;
     outcomesBox.innerHTML = outcomesTable(r.outcomes);
+    attributionBox.innerHTML = attributionHTML(r.attribution);
     nodeBar.innerHTML = r.nodes.map((n, ni) =>
       `<button class="nbtn" type="button" role="tab" data-node="${ni}" aria-selected="${ni === 0}"><span class="bn">${esc(n.name)}</span><span class="bk">${esc(n.kind)}</span></button>`).join('');
     Array.from(nodeBar.querySelectorAll('.nbtn')).forEach((b, ni) => b.addEventListener('click', () => showNode(ni)));

@@ -8,20 +8,10 @@ import { join } from 'node:path';
 import { callLLMJson } from '../../llm/qodercli.js';
 import { contract } from '../abstract/a2_incentive.js';
 import { VERDICT } from '../../ontology/schema.js';
+import { competitorMid } from '../../lib/market.js';
 
 const APP_DIR = new URL('../..', import.meta.url).pathname;
 const ROI_CAP_RATIO = 0.3; // ROI 硬上限：写死在代码，改 prompt 动不了它
-
-// 该簇竞对价格带中点的中位数；无竞对数据时退回簇价位带中点
-function competitorMid(offSiteSales, cluster) {
-  const mids = offSiteSales
-    .filter((r) => r.cluster_id === cluster.cluster_id)
-    .map((r) => (r.price_band.min + r.price_band.max) / 2)
-    .sort((a, b) => a - b);
-  if (mids.length === 0) return (cluster.price_range.min + cluster.price_range.max) / 2;
-  const i = Math.floor(mids.length / 2);
-  return mids.length % 2 ? mids[i] : (mids[i - 1] + mids[i]) / 2;
-}
 
 export async function run({ selection_cards }, { optDir, logFile }) {
   const pushed = selection_cards.filter((c) => c.verdict === VERDICT.PUSH);
@@ -35,7 +25,7 @@ export async function run({ selection_cards }, { optDir, logFile }) {
   // 每张推的卡的判断材料：卡的结构化字段 + reason 文本 + 价格参照 + ROI 上限
   const items = pushed.map((card) => {
     const cluster = clusterMap[card.cluster_id];
-    const mid = competitorMid(offSiteSales, cluster);
+    const mid = competitorMid(offSiteSales, card.cluster_id, (cluster.price_range.min + cluster.price_range.max) / 2);
     return {
       card_id: card.card_id,
       cluster_id: card.cluster_id,

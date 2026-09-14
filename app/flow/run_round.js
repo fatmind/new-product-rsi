@@ -17,6 +17,7 @@ import { run as a4 } from '../action/env/a4_merchant.js';
 import { run as a5 } from '../action/env/a5_consumer.js';
 import { bjNow } from '../lib/time.js';
 import { ZERO_BREAK_THRESHOLD } from '../lib/consts.js';
+import { attribute } from './attribution.js';
 
 const APP_DIR = new URL('..', import.meta.url).pathname;
 
@@ -166,6 +167,19 @@ writeSnap('snap_6_settle', {
   })),
   trust_updates,
 });
+
+// 归因裁据表（DFS 剪枝的裁据，当场算、当场落盘）——只读业务可见快照，产出 runs/rN/attribution.json。
+// 这一段是"观察层"：不改环境、不加可调项、不回流真值/画像/trust/商家 why（详见 attribution.js 头注释）。
+flowEvent('attribution:compute', '归因裁据层（三段剪枝）');
+const attributionOut = attribute({
+  round,
+  dispatchPackages: s3.dispatch_packages,
+  productsWithSales: s5.products_with_sales,
+  salesByGroup: s5.sales_by_group,
+  offSiteSales: JSON.parse(readFileSync(join(APP_DIR, 'data/off_site_sales.json'), 'utf8')),
+  clusters: JSON.parse(readFileSync(join(APP_DIR, 'data/clusters.json'), 'utf8')),
+});
+writeSnap('attribution', attributionOut);
 
 console.log(`\n=== ${round} 完成 ===`);
 console.log(`下发 ${dispatched} 个包，发布 ${s5.products_with_sales.length} 个品，破零 ${broke.length} 个`);

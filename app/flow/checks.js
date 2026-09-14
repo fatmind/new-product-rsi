@@ -6,22 +6,13 @@
 import { existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { ZERO_BREAK_THRESHOLD } from '../lib/consts.js';
+import { competitorMid } from '../lib/market.js';
 
 const APP_DIR = new URL('..', import.meta.url).pathname;
 
 function readJson(p) { return JSON.parse(readFileSync(p, 'utf8')); }
-
-// 该簇竞对价格带中点的中位数（与 a2 同口径，用于重算 ROI 上限）
-function competitorMid(offSiteSales, clusterId, clusters) {
-  const mids = offSiteSales.filter((r) => r.cluster_id === clusterId)
-    .map((r) => (r.price_band.min + r.price_band.max) / 2).sort((a, b) => a - b);
-  if (mids.length === 0) {
-    const c = clusters.find((x) => x.cluster_id === clusterId);
-    return (c.price_range.min + c.price_range.max) / 2;
-  }
-  const i = Math.floor(mids.length / 2);
-  return mids.length % 2 ? mids[i] : (mids[i - 1] + mids[i]) / 2;
-}
+// 无竞对数据时回退簇价位带中点（与 a2 同口径，用于重算 ROI 上限）
+const clusterMidFallback = (cluster) => (cluster.price_range.min + cluster.price_range.max) / 2;
 
 // 对一轮做全部强规则校验；返回 { items: [{name, pass, note}], matrix: [{cluster, verdict, expect, grade}] }
 export function runChecks(round) {
@@ -36,6 +27,22 @@ export function runChecks(round) {
   add('round', '快照序列完整（snap_0~6 + logs）', missing.length === 0 && existsSync(join(dir, 'logs')),
     missing.length ? `缺 ${missing.join('、')}` : '');
   if (missing.length) return { items, matrix: [] }; // 快照不齐，后面没法查
+
+  // 0.5 归因裁据表存在（advisory：老轮次改造前跑的无此文件不阻断，展示为"待补算"）
+  add('round', '归因裁据表存在（attribution.json）', existsSync(join(dir, 'attribution.json')),
+    existsSync(join(dir, 'attribution.json')) ? '' : '改造前跑的老轮无此文件，报告/自迭代会从快照现算');
+
+  // 0.5b 归因产物无上帝字段泄漏（advisory：attribution.json / improvement_points.json 只许含业务可见字段）
+  const attrFiles = ['attribution.json', 'improvement_points.json'].filter((f) => existsSync(join(dir, f)));
+  const attrLeak = [];
+  for (const f of attrFiles) {
+    const raw = readFileSync(join(dir, f), 'utf8');
+    if (/_ground_truth|"role"|"expect"/.test(raw)) attrLeak.push(`${f}: 疑似上帝真值`);
+    if (/trust_updates|"trust"/.test(raw)) attrLeak.push(`${f}: trust 数值`);
+    if (/"why"/.test(raw)) attrLeak.push(`${f}: 商家内心 why`);
+    if (/base_cvr|cluster_pv_predict/.test(raw)) attrLeak.push(`${f}: 消费者画像`);
+  }
+  add('round', '归因产物不含上帝视角字段', attrLeak.length === 0, attrLeak.join('；'));
 
   const s0 = readJson(join(dir, 'snap_0.json'));
   const s1 = readJson(join(dir, 'snap_1_a1_selection.json'));
@@ -60,7 +67,8 @@ export function runChecks(round) {
   add('a2', '激励与"推"的卡一一对应', pushedIds === incIds, pushedIds === incIds ? '' : `推卡 [${pushedIds}] vs 激励 [${incIds}]`);
 
   // 3. ROI 硬上限真的守住了（重算，a2）
-  const roiBad = s2.incentives.filter((i) => i.subsidy > 0.3 * competitorMid(offSiteSales, i.cluster_id, clusters) + 1e-9);
+  const clusterMapForRoi = Object.fromEntries(clusters.map((c) => [c.cluster_id, c]));
+  const roiBad = s2.incentives.filter((i) => i.subsidy > 0.3 * competitorMid(offSiteSales, i.cluster_id, clusterMidFallback(clusterMapForRoi[i.cluster_id])) + 1e-9);
   add('a2', '补贴 ROI 上限（≤0.3×竞对中位价）', roiBad.length === 0,
     roiBad.length ? roiBad.map((i) => `${i.cluster_id} 补 ${i.subsidy} 超线`).join('；') : '');
 

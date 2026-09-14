@@ -144,11 +144,27 @@ product.sales_7d
 
 ---
 
+## 归因裁据层（观察层，非可调项）
+
+对每个下发过的簇，用确定性判据当场定位"没破零"卡在哪一段，产出 `runs/rN/attribution.json`。思路与立项动机见 @spec/选品自迭代改进_讨论汇总.md；三段判据、防作弊防火墙、跨轮聚合、字面重放工具的实现细节全在代码头注释里（@app/flow/attribution.js、@app/flow/improvement_ledger.js、@app/flow/replay.js），这里只记三条落点：
+
+- **谁算**：run_round 结算后当场算，每轮一等产物落盘 `runs/rN/attribution.json`；老轮无此文件的由自迭代/报告现算兜底（`ensureAttribution`）。
+- **裁据定位**：`broke`（破零，无需归因）→ `merchant_not_publish`（商家没接→②指引）→ `pricing_dead`（成本线高于竞对卖价，死局→①别推）→ `pricing`（实付没进竞对带→②）→ `demand`（价对还卖不动→①需求/用户群匹配，剩下的硬空间）。
+- **不是答案**：`in_band`/`pay`/`sales` 是"价格/转化是不是凶手"的**代理指标**，不等于"该不该推"；裁据只排除价格/引导分支，裁剩的 demand 空间留给选品研判继续探索。
+
+---
+
 ## 红线
 
 - **实验运行中**环境保持不动：三份数据、商家画像等，一轮实验内不改 —— 中途改了，这轮的破零率就没法比
 - 实验跑完发现环境有问题，正常修正，重新跑一轮就行
 - 可优化的只有 ①② 列出的优化点；别处没有可调项
+
+### 程序防作弊防火墙（贯穿，软约束代码 + 自迭代本文件约束）
+
+- 归因裁据层/改进点台账/字面重放工具（@app/flow/attribution.js、@app/flow/improvement_ledger.js、@app/flow/replay.js）**只用业务可见字段**（pay / in_band / 可见销量 / 分群销量 / 发布行为），含 `_ground_truth.json`、trust、商家 why、消费者画像、上帝侧 alerts 等一律不读不进；checks.js 有泄漏扫描。
+- 字面重放是上帝侧诊断，**只给人看、不进优化环**（要用它定罪就得拿真值对答案 = 泄漏）；学习环内的"抹噪声"手段只有跨轮聚合（业务可见销量）。
+- 上帝侧 alerts / 画像 / 商家 why 只进 report 展示，回流优化 = 作弊。
 
 
 ## 技术方案
@@ -157,7 +173,7 @@ product.sales_7d
 
 - app
     - ontology/ 本体对象 schema 定义（声明式定义为主体，校验从定义派生）
-    - flow/ 业务主链路：run_round（跑一轮）/ self_iterate（自迭代出下轮参数包）/ reset（开发期重置）/ report（生成 runs/report.html 可视化报告，上帝视角排障用）
+    - flow/ 业务主链路：run_round（跑一轮，结算后当场算归因）/ self_iterate（DFS 剪枝式自迭代出下轮参数包）/ attribution（归因裁据层）/ improvement_ledger（改进点台账）/ replay（字面重放诊断，仅展示）/ reset（开发期重置）/ report（生成 runs/report.html 可视化报告，含归因表）
     - lib/ 公共工具（北京时间等；全项目时间统一北京时间）
     - action/ 动作定义和实现，动作需要实例化本体一起做
         - abstract/ 每个动作一份接口定义（输入→输出契约，不搞统一基类）
@@ -194,7 +210,7 @@ product.sales_7d
 - LLM 调用：每次直接起 qodercli 子进程——`qodercli -p "<prompt>" --output-format stream-json --dangerously-skip-permissions`，解析 result 事件拿结果；无 session、无缓存，每次真调
 - LLM 结构化输出：prompt 强制只输出 JSON，代码解析 + 按 ontology schema 校验，失败重试（最多 3 次）
 - 写快照时机：开跑先写 snap_0，每个动作执行完**立即**写增量快照，LLM 请求/响应**实时**追加 logs/ —— 过程中记录，不攒到最后
-- 快照写谁：**增量 = 动作的输出**——每个动作产出哪些本体对象，接口契约写死了，执行完把输出原样落盘 snap_N_action_xxx，不做 diff 检测；snap_0 只快照本轮会被改的状态（当前只有商家 trust；data / opt_points / 消费者画像跑动中不变，不重复拷）；结算后补最后一份（破零率 + trust 新值）
+- 快照写谁：**增量 = 动作的输出**——每个动作产出哪些本体对象，接口契约写死了，执行完把输出原样落盘 snap_N_action_xxx，不做 diff 检测；snap_0 只快照本轮会被改的状态（当前只有商家 trust；data / opt_points / 消费者画像跑动中不变，不重复拷）；结算后补最后一份（破零率 + trust 新值），再补 `attribution.json`（归因裁据层产出，见上文「归因裁据层」节）
 - 参数包选择：有 opt_points/rN 用 rN（自迭代开始后才生成）；没有则 flow 直接用 init，不自动生成 rN
 - trust 放 action/env/ 商家实例数据里（给初始值）：④商家决策自己读；flow 算完破零率按规则就地更新这个值。trust 不是优化点，自迭代不许手改
 

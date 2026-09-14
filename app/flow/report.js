@@ -50,6 +50,7 @@ for (const r of rounds) {
     s4: readJson(join(dir, 'snap_4_a4_merchant.json')),
     s5: readJson(join(dir, 'snap_5_a5_consumer.json')),
     s6: readJson(join(dir, 'snap_6_settle.json')),
+    attr: existsSync(join(dir, 'attribution.json')) ? readJson(join(dir, 'attribution.json')) : null,
     pack: existsSync(join(APP_DIR, 'opt_points', r)) ? `${r} 参数包` : 'init 参数包',
   };
 }
@@ -176,6 +177,32 @@ function nodeRaw(r) {
   return { a1: d.s1, a2: d.s2, a3: d.s3, a4: d.s4, a5: d.s5 };
 }
 
+// 归因裁据表（人类视图，只放业务可见字段；老轮无 attribution.json → null 显示"待补算"）
+// 裁据定位是确定性判据，非答案：进带/未进带只是"价格不是凶手的代理"，不等于"该推"
+const PRUNE_LABEL = {
+  broke: '破零·无需归因',
+  merchant_not_publish: '商家没接',
+  pricing_dead: '价格死局',
+  pricing: '价格/引导',
+  demand: '需求/用户群',
+};
+function attributionTable(r) {
+  const a = roundData[r].attr;
+  if (!a || !Array.isArray(a.clusters)) return null;
+  const rows = a.clusters.map((c) => [
+    label(c.cluster_id),
+    c.published ? '已发布' : '未发布',
+    c.pay == null ? '—' : `$${c.pay}`,
+    c.competitor_mid == null ? '—' : `$${c.competitor_mid}`,
+    c.in_band == null ? '—' : (c.in_band ? '进带' : '未进带'),
+    `${c.sales_7d}`,
+    c.broke ? '<b>破零</b>' : '未破零',
+    `<span class="chip ${c.pruned_at === 'demand' ? 'chip-warn' : c.pruned_at === 'broke' ? 'chip-ok' : 'chip-info'}">${esc(PRUNE_LABEL[c.pruned_at] ?? c.pruned_at)}</span>`,
+    esc(cut(c.residual, 70)),
+  ]);
+  return { head: ['配件簇', '发布', '实付', '竞对中位', '进带?', '销量', '破零', '裁据定位', '一句话说明'], rows };
+}
+
 // 02 板块示例 sparkline：armband（真新星）三国/五群合计的 4 条周序列
 function exampleSeries() {
   const cid = 'armband';
@@ -245,6 +272,7 @@ const DATA = {
     id: r.toUpperCase(),
     key: r,
     pack: roundData[r].pack,
+    attribution: attributionTable(r),
     candidates: roundData[r].s0.candidates ?? [],
     poolSize: clusters.length,
     alerts: analysis.rounds[r]?.alerts ?? [],

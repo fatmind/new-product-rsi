@@ -53,13 +53,13 @@ spec/                  Design docs (system architecture, ontology, business map,
 draf/                  Design thinking & consensus notes
 app/
   ontology/            Object schema definitions (declarative; validation derives from them)
-  flow/                run_round · self_iterate · report · analyze · checks · reset
+  flow/                run_round · self_iterate (DFS-pruning) · attribution (checkpoint layer) · improvement_ledger · replay (diagnostic) · report · analyze · checks · reset
   action/              abstract (interface contracts) · system · business · env (merchants, consumer groups)
   llm/                 qodercli adapter — the single exit for every LLM call
-  lib/                 Shared utils (Beijing-time, constants, ontology context)
+  lib/                 Shared utils (Beijing-time, constants, ontology context, market/competitor price-band)
   scene/               Scene assets: business map + symlinked judgment experience
   data/                Hero item, clusters, the three datasets (+ generate.js, ground truth)
-  runs/rN/             Execution artifacts: snap_0..snap_6 + logs, one dir per round
+  runs/rN/             Execution artifacts: snap_0..snap_6 + logs + attribution.json (attribution checkpoint), one dir per round
   opt_points/          Optimizable points: init/ + per-round parameter packages rN/
 ```
 
@@ -93,6 +93,12 @@ node app/flow/run_round.js r2    # run with the new parameter package
 # ... repeat ...
 node app/flow/report.js --fresh  # god-view report on all rounds
 ```
+
+## Attribution checkpoint layer (why self-iteration is DFS pruning)
+
+Since self-iteration started, break-zero counts were stuck at 1–2 across r1–r5 — most of the time not because the strategy was wrong, but because one noisy break-zero figure was being blamed on a whole long chain (which cluster → subsidy → merchant price → noise → break). So `self_iterate.js` was rewritten to **prune the attribution chain short**: `run_round.js` computes a deterministic, business-visible checkpoint per round (`runs/rN/attribution.json`) that locates each non-breaking cluster to one segment — `broke / merchant_not_publish / pricing_dead / pricing / demand`. Self-iteration then only re-derives the narrow `demand` (需求/用户群匹配) space left over, and never re-derives an excluded segment. Full rationale & guardrails: `spec/选品自迭代改进_讨论汇总.md` + the code header comments in `app/flow/attribution.js` / `improvement_ledger.js` / `replay.js`.
+
+**Anti-cheat firewall (verbatim, unchanged):** the checkpoint, ledger and replay tool use only business-visible fields (pay / in-band / observed sales / per-group sales / publishing behavior) — never `_ground_truth.json`, `trust`, merchant `why`, consumer personas, or god-view alerts. `checks.js` runs a leak scan on these files. Literal replay is a god-view diagnostic for humans only, never consumed by the optimization loop (convicting its entries would require the truth value = leak).
 
 ## The two optimizable points (everything else is code-fixed)
 

@@ -1,0 +1,82 @@
+{
+  "round": "r1",
+  "dispatched": 3,
+  "published": 3,
+  "clusters": [
+    {
+      "cluster_id": "comfort_nylon_band",
+      "published": true,
+      "merchant_id": "m_trader_deco",
+      "price": 12.9,
+      "subsidy": 2,
+      "pay": 10.9,
+      "competitor_mid": 10,
+      "cost_floor": 8,
+      "band_max": 13,
+      "in_band": false,
+      "sales_7d": 5,
+      "broke": true,
+      "price_dead": false,
+      "pruned_at": "broke",
+      "residual": "破零，无需归因",
+      "evidence": {
+        "sport_fitness": 1,
+        "commuter_whitecollar": 0,
+        "young_student": 4,
+        "onlooker": 0,
+        "discount_hunter": 0
+      }
+    },
+    {
+      "cluster_id": "sport_loop_band",
+      "published": true,
+      "merchant_id": "m_trader_deco",
+      "price": 14.9,
+      "subsidy": 3.45,
+      "pay": 11.45,
+      "competitor_mid": 11.5,
+      "cost_floor": 9,
+      "band_max": 15,
+      "in_band": true,
+      "sales_7d": 6,
+      "broke": true,
+      "price_dead": false,
+      "pruned_at": "broke",
+      "residual": "破零，无需归因",
+      "evidence": {
+        "sport_fitness": 3,
+        "commuter_whitecollar": 0,
+        "young_student": 3,
+        "onlooker": 0,
+        "discount_hunter": 0
+      }
+    },
+    {
+      "cluster_id": "kids_band",
+      "published": true,
+      "merchant_id": "m_premium_boutique",
+      "price": 12.9,
+      "subsidy": 1.5,
+      "pay": 11.4,
+      "competitor_mid": 9,
+      "cost_floor": 7,
+      "band_max": 12,
+      "in_band": false,
+      "sales_7d": 4,
+      "broke": false,
+      "price_dead": false,
+      "pruned_at": "pricing",
+      "residual": "实付 ¥11.4 高于竞对中位 ¥9，商家没把实付拉进竞对带 → 引导/定价问题（改 lead：给死目标价+留上浮余量）",
+      "evidence": {
+        "sport_fitness": 0,
+        "commuter_whitecollar": 0,
+        "young_student": 4,
+        "onlooker": 0,
+        "discount_hunter": 0
+      }
+    }
+  ],
+  "alerts": [
+    "引导失效：kids_band 商家上架后实付 ¥11.4 仍高于竞对中位 ¥9，lead 没把实付目标拉到场；本轮未破零（4 单）"
+  ]
+}

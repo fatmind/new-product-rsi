@@ -1,0 +1,80 @@
+{
+  "round": "r5",
+  "dispatched": 3,
+  "published": 3,
+  "clusters": [
+    {
+      "cluster_id": "comfort_nylon_band",
+      "published": true,
+      "merchant_id": "m_trader_general",
+      "price": 12.99,
+      "subsidy": 2.5,
+      "pay": 10.49,
+      "competitor_mid": 10,
+      "cost_floor": 8,
+      "band_max": 13,
+      "in_band": false,
+      "sales_7d": 5,
+      "broke": true,
+      "price_dead": false,
+      "pruned_at": "broke",
+      "residual": "破零，无需归因",
+      "evidence": {
+        "sport_fitness": 1,
+        "commuter_whitecollar": 0,
+        "young_student": 4,
+        "onlooker": 0,
+        "discount_hunter": 0
+      }
+    },
+    {
+      "cluster_id": "kids_band",
+      "published": true,
+      "merchant_id": "m_trader_sport",
+      "price": 8.99,
+      "subsidy": 2,
+      "pay": 6.99,
+      "competitor_mid": 9,
+      "cost_floor": 7,
+      "band_max": 12,
+      "in_band": true,
+      "sales_7d": 1,
+      "broke": false,
+      "price_dead": false,
+      "pruned_at": "demand",
+      "residual": "实付 ¥6.99 已压进竞对带（≤竞对中位 ¥9）仍只卖 1 单（<5），价格不是凶手——问题在需求/用户群匹配，留给选品研判攻",
+      "evidence": {
+        "sport_fitness": 0,
+        "commuter_whitecollar": 0,
+        "young_student": 1,
+        "onlooker": 0,
+        "discount_hunter": 0
+      }
+    },
+    {
+      "cluster_id": "leather_band_classic",
+      "published": true,
+      "merchant_id": "m_factory_leather",
+      "price": 19,
+      "subsidy": 3,
+      "pay": 16,
+      "competitor_mid": 19,
+      "cost_floor": 15,
+      "band_max": 24,
+      "in_band": true,
+      "sales_7d": 0,
+      "broke": false,
+      "price_dead": false,
+      "pruned_at": "demand",
+      "residual": "实付 ¥16 已压进竞对带（≤竞对中位 ¥19）仍只卖 0 单（<5），价格不是凶手——问题在需求/用户群匹配，留给选品研判攻",
+      "evidence": {
+        "sport_fitness": 0,
+        "commuter_whitecollar": 0,
+        "young_student": 0,
+        "onlooker": 0,
+        "discount_hunter": 0
+      }
+    }
+  ],
+  "alerts": []
+}

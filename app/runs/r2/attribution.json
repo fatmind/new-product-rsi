@@ -1,0 +1,106 @@
+{
+  "round": "r2",
+  "dispatched": 4,
+  "published": 4,
+  "clusters": [
+    {
+      "cluster_id": "premium_metal_band",
+      "published": true,
+      "merchant_id": "m_trader_general",
+      "price": 42.99,
+      "subsidy": 12,
+      "pay": 30.99,
+      "competitor_mid": 45,
+      "cost_floor": 25,
+      "band_max": 55,
+      "in_band": true,
+      "sales_7d": 4,
+      "broke": false,
+      "price_dead": false,
+      "pruned_at": "demand",
+      "residual": "实付 ¥30.99 已压进竞对带（≤竞对中位 ¥45）仍只卖 4 单（<5），价格不是凶手——问题在需求/用户群匹配，留给选品研判攻",
+      "evidence": {
+        "sport_fitness": 0,
+        "commuter_whitecollar": 4,
+        "young_student": 0,
+        "onlooker": 0,
+        "discount_hunter": 0
+      }
+    },
+    {
+      "cluster_id": "comfort_nylon_band",
+      "published": true,
+      "merchant_id": "m_factory_leather",
+      "price": 10,
+      "subsidy": 3,
+      "pay": 7,
+      "competitor_mid": 10,
+      "cost_floor": 8,
+      "band_max": 13,
+      "in_band": true,
+      "sales_7d": 7,
+      "broke": true,
+      "price_dead": false,
+      "pruned_at": "broke",
+      "residual": "破零，无需归因",
+      "evidence": {
+        "sport_fitness": 1,
+        "commuter_whitecollar": 0,
+        "young_student": 6,
+        "onlooker": 0,
+        "discount_hunter": 0
+      }
+    },
+    {
+      "cluster_id": "sport_loop_band",
+      "published": true,
+      "merchant_id": "m_factory_leather",
+      "price": 11.5,
+      "subsidy": 2.5,
+      "pay": 9,
+      "competitor_mid": 11.5,
+      "cost_floor": 9,
+      "band_max": 15,
+      "in_band": true,
+      "sales_7d": 6,
+      "broke": true,
+      "price_dead": false,
+      "pruned_at": "broke",
+      "residual": "破零，无需归因",
+      "evidence": {
+        "sport_fitness": 3,
+        "commuter_whitecollar": 0,
+        "young_student": 3,
+        "onlooker": 0,
+        "discount_hunter": 0
+      }
+    },
+    {
+      "cluster_id": "screen_protector",
+      "published": true,
+      "merchant_id": "m_trader_general",
+      "price": 4.99,
+      "subsidy": 1.05,
+      "pay": 3.94,
+      "competitor_mid": 3.5,
+      "cost_floor": 3,
+      "band_max": 5,
+      "in_band": false,
+      "sales_7d": 2,
+      "broke": false,
+      "price_dead": false,
+      "pruned_at": "pricing",
+      "residual": "实付 ¥3.94 高于竞对中位 ¥3.5，商家没把实付拉进竞对带 → 引导/定价问题（改 lead：给死目标价+留上浮余量）",
+      "evidence": {
+        "sport_fitness": 0,
+        "commuter_whitecollar": 0,
+        "young_student": 1,
+        "onlooker": 0,
+        "discount_hunter": 1
+      }
+    }
+  ],
+  "alerts": [
+    "引导失效：screen_protector 商家上架后实付 ¥3.94 仍高于竞对中位 ¥3.5，lead 没把实付目标拉到场；本轮未破零（2 单）"
+  ]
+}
