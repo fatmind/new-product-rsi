@@ -1,16 +1,17 @@
 // llm/qodercli.js —— 全部 LLM 调用的唯一出口
-// 每次直接起 qodercli 子进程，无 session、无缓存，每次真调：
-//   qodercli -p "<prompt>" --output-format stream-json --dangerously-skip-permissions
-// 解析 stream-json 事件流，取 type=result 事件的 result 文本。
+// 每次直接起 claude code 子进程，无 session、无缓存，每次真调：
+//   claude -p "<prompt>" --output-format stream-json --verbose --dangerously-skip-permissions
+// 解析 stream-json 事件流，取 type=result 事件的 result 文本（claude/ qodercli 同一事件格式）。
 // 日志实时追加 .log 文本文件：每行一条（北京时间），过程中记录，不攒到最后。
+// 注：bin 用 claude code 取代 qodercli（本机未装 qodercli）；文件保留原名，改的是内部实现。
 
 import { spawn } from 'node:child_process';
 import { appendFileSync, mkdirSync } from 'node:fs';
 import { dirname } from 'node:path';
 import { bjNow } from '../lib/time.js';
 
-const BIN = 'qodercli';
-const BASE_ARGS = ['--output-format', 'stream-json', '--dangerously-skip-permissions'];
+const BIN = 'claude';
+const BASE_ARGS = ['--output-format', 'stream-json', '--verbose', '--dangerously-skip-permissions'];
 const TIMEOUT_MS = 10 * 60 * 1000; // 单次调用超时
 
 // 实时追加一行日志（换行压成 \n，保证每行一条）；logFile 为空则不落
@@ -21,18 +22,21 @@ function logLine(logFile, label, kind, content) {
   appendFileSync(logFile, `[${bjNow()}] [${label}] ${kind}: ${oneLine}\n`);
 }
 
-// 调一次 qodercli，返回 result 文本；拿不到 result 事件 / 非 success 直接抛错
+// 调一次 claude，返回 result 文本；拿不到 result 事件 / 非 success 直接抛错
 export function callLLM(prompt, { logFile = null, label = 'llm' } = {}) {
   return new Promise((resolve, reject) => {
     logLine(logFile, label, 'request', prompt);
-    const child = spawn(BIN, ['-p', prompt, ...BASE_ARGS], { stdio: ['ignore', 'pipe', 'pipe'] });
+    // prompt 经 stdin 传给 claude -p（作为命令行 -p "<prompt>" 参数会超长：self_iterate 上下文很大）
+    const child = spawn(BIN, ['-p', ...BASE_ARGS], { stdio: ['pipe', 'pipe', 'pipe'] });
+    child.stdin.write(prompt);
+    child.stdin.end();
 
     let buf = '';
     let stderr = '';
     let result = null;
     const timer = setTimeout(() => {
       child.kill('SIGKILL');
-      const err = new Error(`${label}: qodercli 超时（${TIMEOUT_MS}ms）`);
+      const err = new Error(`${label}: ${BIN} 超时（${TIMEOUT_MS}ms）`);
       logLine(logFile, label, 'error', err);
       reject(err);
     }, TIMEOUT_MS);

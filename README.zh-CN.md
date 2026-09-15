@@ -55,7 +55,7 @@ app/
   ontology/            本体对象 schema 定义（声明式，校验从定义派生）
   flow/                run_round · self_iterate（DFS 剪枝式）· attribution（归因裁据层）· improvement_ledger（改进点台账）· replay（重放诊断，仅展示）· report · analyze · checks · reset
   action/              abstract（接口契约）· system · business · env（商家/消费者群）
-  llm/                 qodercli 适配层 —— 全部 LLM 调用的唯一出口
+  llm/                 LLM 适配层（bin 用 claude code）—— 全部 LLM 调用的唯一出口
   lib/                 公共工具（北京时间、常量、本体上下文、竞对价格带 market）
   scene/               场景资产：业务地图 + 研判经验软链
   data/                热点单品、簇、三份数据（+ generate.js、真值表）
@@ -66,7 +66,7 @@ app/
 ## 环境要求
 
 - **Node.js ≥ 18**（纯 ESM，无构建链、零依赖，只用 node 内置模块）
-- **`qodercli` 在 PATH 上** —— 每次 LLM 调用直接起 `qodercli -p "<prompt>" --output-format stream-json --dangerously-skip-permissions`（无 session、无缓存，每次真调）。全项目时间统一北京时间。
+- **`claude` 在 PATH 上** —— 每次 LLM 调用直接起 `claude -p`，prompt 经 stdin 传入（`--output-format stream-json --verbose --dangerously-skip-permissions`，无 session、无缓存，每次真调）。全项目时间统一北京时间。
 
 ## 用法
 

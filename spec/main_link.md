@@ -180,7 +180,7 @@ product.sales_7d
         - system/ 系统动作
         - business/ 业务动作
         - env/ 环境（商家/消费者），注意需多个本体实例化；商家实例含 trust 初始值（唯一轮间可变，flow 结算后就地更新）
-    - llm/ qodercli 适配层（全部 LLM 调用的唯一出口）
+    - llm/ LLM 适配层（全部 LLM 调用的唯一出口；bin 用 claude code）
     - scene/big_item_accessories/ 场景资产（业务地图）
         - flow/ 场景 SOP（当前无特殊步骤，直接走通用 flow，建目录占位，保持结构完整）
         - experience/ 研判经验条目（软链引用 opt_points/init/xx.md 研判经验文件）
@@ -207,7 +207,7 @@ product.sales_7d
 **技术决策**
 
 - Node.js 纯 JS（ESM），不引构建链，只用 node 内置模块（child_process / fs / path）
-- LLM 调用：每次直接起 qodercli 子进程——`qodercli -p "<prompt>" --output-format stream-json --dangerously-skip-permissions`，解析 result 事件拿结果；无 session、无缓存，每次真调
+- LLM 调用：每次直接起 claude code 子进程——prompt 经 stdin 传给 `claude -p --output-format stream-json --verbose --dangerously-skip-permissions`（同事件格式也兼容 qodercli），解析 type=result 事件拿结果；无 session、无缓存，每次真调。prompt 不用命令行参数传，因为 self_iterate 上下文过长会超 CLI 参数/输入限制
 - LLM 结构化输出：prompt 强制只输出 JSON，代码解析 + 按 ontology schema 校验，失败重试（最多 3 次）
 - 写快照时机：开跑先写 snap_0，每个动作执行完**立即**写增量快照，LLM 请求/响应**实时**追加 logs/ —— 过程中记录，不攒到最后
 - 快照写谁：**增量 = 动作的输出**——每个动作产出哪些本体对象，接口契约写死了，执行完把输出原样落盘 snap_N_action_xxx，不做 diff 检测；snap_0 只快照本轮会被改的状态（当前只有商家 trust；data / opt_points / 消费者画像跑动中不变，不重复拷）；结算后补最后一份（破零率 + trust 新值），再补 `attribution.json`（归因裁据层产出，见上文「归因裁据层」节）

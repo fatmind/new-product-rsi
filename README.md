@@ -55,7 +55,7 @@ app/
   ontology/            Object schema definitions (declarative; validation derives from them)
   flow/                run_round · self_iterate (DFS-pruning) · attribution (checkpoint layer) · improvement_ledger · replay (diagnostic) · report · analyze · checks · reset
   action/              abstract (interface contracts) · system · business · env (merchants, consumer groups)
-  llm/                 qodercli adapter — the single exit for every LLM call
+  llm/                 LLM adapter (claude code) — the single exit for every LLM call
   lib/                 Shared utils (Beijing-time, constants, ontology context, market/competitor price-band)
   scene/               Scene assets: business map + symlinked judgment experience
   data/                Hero item, clusters, the three datasets (+ generate.js, ground truth)
@@ -66,7 +66,7 @@ app/
 ## Requirements
 
 - **Node.js ≥ 18** (plain ESM, no build step, no dependencies — only built-in `node:fs` / `node:path` / `node:child_process`)
-- **`qodercli`** on `PATH` — every LLM call spawns `qodercli -p "<prompt>" --output-format stream-json --dangerously-skip-permissions` (no session, no cache, real call each time). All timestamps are Beijing time.
+- **`claude`** on `PATH` — every LLM call spawns `claude -p` with the prompt piped on stdin (`--output-format stream-json --verbose --dangerously-skip-permissions`; no session, no cache, real call each time). All timestamps are Beijing time.
 
 ## Usage
 

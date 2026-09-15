@@ -1,0 +1,158 @@
+[
+  {
+    "cluster_id": "kids_band",
+    "first_round": "r1",
+    "last_round": "r5",
+    "appearances": 3,
+    "pruned_at": "pricing",
+    "residual": "实付 ¥11.4 高于竞对中位 ¥9，商家没把实付拉进竞对带 → 引导/定价问题（改 lead：给死目标价+留上浮余量）",
+    "evidence": {
+      "pay": 11.4,
+      "competitor_mid": 9,
+      "in_band": false,
+      "sales": 4,
+      "sales_by_group": {
+        "sport_fitness": 0,
+        "commuter_whitecollar": 0,
+        "young_student": 4,
+        "onlooker": 0,
+        "discount_hunter": 0
+      }
+    },
+    "locations": [
+      {
+        "round": "r1",
+        "pruned_at": "pricing"
+      },
+      {
+        "round": "r3",
+        "pruned_at": "pricing"
+      },
+      {
+        "round": "r5",
+        "pruned_at": "demand"
+      }
+    ],
+    "status": "patched"
+  },
+  {
+    "cluster_id": "premium_metal_band",
+    "first_round": "r2",
+    "last_round": "r3",
+    "appearances": 2,
+    "pruned_at": "demand",
+    "residual": "实付 ¥30.99 已压进竞对带（≤竞对中位 ¥45）仍只卖 4 单（<5），价格不是凶手——问题在需求/用户群匹配，留给选品研判攻",
+    "evidence": {
+      "pay": 30.99,
+      "competitor_mid": 45,
+      "in_band": true,
+      "sales": 4,
+      "sales_by_group": {
+        "sport_fitness": 0,
+        "commuter_whitecollar": 4,
+        "young_student": 0,
+        "onlooker": 0,
+        "discount_hunter": 0
+      }
+    },
+    "locations": [
+      {
+        "round": "r2",
+        "pruned_at": "demand"
+      },
+      {
+        "round": "r3",
+        "pruned_at": "demand"
+      }
+    ],
+    "status": "patched"
+  },
+  {
+    "cluster_id": "screen_protector",
+    "first_round": "r2",
+    "last_round": "r2",
+    "appearances": 1,
+    "pruned_at": "pricing",
+    "residual": "实付 ¥3.94 高于竞对中位 ¥3.5，商家没把实付拉进竞对带 → 引导/定价问题（改 lead：给死目标价+留上浮余量）",
+    "evidence": {
+      "pay": 3.94,
+      "competitor_mid": 3.5,
+      "in_band": false,
+      "sales": 2,
+      "sales_by_group": {
+        "sport_fitness": 0,
+        "commuter_whitecollar": 0,
+        "young_student": 1,
+        "onlooker": 0,
+        "discount_hunter": 1
+      }
+    },
+    "locations": [
+      {
+        "round": "r2",
+        "pruned_at": "pricing"
+      }
+    ],
+    "status": "patched"
+  },
+  {
+    "cluster_id": "leather_band_classic",
+    "first_round": "r3",
+    "last_round": "r5",
+    "appearances": 2,
+    "pruned_at": "demand",
+    "residual": "实付 ¥18.3 已压进竞对带（≤竞对中位 ¥19）仍只卖 1 单（<5），价格不是凶手——问题在需求/用户群匹配，留给选品研判攻",
+    "evidence": {
+      "pay": 18.3,
+      "competitor_mid": 19,
+      "in_band": true,
+      "sales": 1,
+      "sales_by_group": {
+        "sport_fitness": 0,
+        "commuter_whitecollar": 1,
+        "young_student": 0,
+        "onlooker": 0,
+        "discount_hunter": 0
+      }
+    },
+    "locations": [
+      {
+        "round": "r3",
+        "pruned_at": "demand"
+      },
+      {
+        "round": "r5",
+        "pruned_at": "demand"
+      }
+    ],
+    "status": "patched"
+  },
+  {
+    "cluster_id": "magnetic_buckle",
+    "first_round": "r4",
+    "last_round": "r4",
+    "appearances": 1,
+    "pruned_at": "demand",
+    "residual": "实付 ¥6.9 已压进竞对带（≤竞对中位 ¥7）仍只卖 1 单（<5），价格不是凶手——问题在需求/用户群匹配，留给选品研判攻",
+    "evidence": {
+      "pay": 6.9,
+      "competitor_mid": 7,
+      "in_band": true,
+      "sales": 1,
+      "sales_by_group": {
+        "sport_fitness": 0,
+        "commuter_whitecollar": 0,
+        "young_student": 1,
+        "onlooker": 0,
+        "discount_hunter": 0
+      }
+    },
+    "locations": [
+      {
+        "round": "r4",
+        "pruned_at": "demand"
+      }
+    ],
+    "status": "patched"
+  }
+]

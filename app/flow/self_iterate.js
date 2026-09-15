@@ -80,6 +80,52 @@ const onSiteSales = bySeen(readJson(join(APP_DIR, 'data/on_site_sales.json')));
 const offSiteSales = bySeen(readJson(join(APP_DIR, 'data/off_site_sales.json')));
 const offSiteDemand = bySeen(readJson(join(APP_DIR, 'data/off_site_demand.json')));
 
+// 三份市场数据本来到"簇×国家×周"粒度（on_site 有 3840 行），全文倒给 LLM 既撑爆 claude 输入，也是本方案要戒的"堆原始数据"。
+// 这里按簇聚合成摘要：保留价格带（竞对卖多少）、销量/需求总量与周均（量级），丢掉逐国家×周的冗余行。
+// 全量原始表仍在 data/*.json（研判环节读的同一份、业务可见），这里只是给 LLM 的入参做窄化。
+function summarizeOffSales(rows) {
+  const by = {};
+  for (const r of rows) {
+    const c = (by[r.cluster_id] ??= { lows: [], highs: [], sales: 0, weeks: new Set() });
+    c.lows.push(r.price_band.min); c.highs.push(r.price_band.max);
+    c.sales += r.sales; c.weeks.add(r.week);
+  }
+  return Object.entries(by).map(([cluster_id, v]) => ({
+    cluster_id,
+    price_band: { min: Math.min(...v.lows), max: Math.max(...v.highs) }, // 竞对价格带范围
+    total_sales: v.sales,
+    avg_week_sales: +(v.sales / v.weeks.size).toFixed(1),
+  }));
+}
+function summarizeOnSite(rows) {
+  const by = {};
+  for (const r of rows) {
+    const c = (by[r.cluster_id] ??= { traffic: 0, orders: 0, weeks: new Set() });
+    c.traffic += r.traffic; c.orders += r.orders; c.weeks.add(r.week);
+  }
+  return Object.entries(by).map(([cluster_id, v]) => ({
+    cluster_id,
+    total_traffic: v.traffic,
+    total_orders: v.orders,
+    traffic_no_order: v.orders === 0 ? '全为流量没订单（有兴趣没供给/没上架）' : '有订单',
+    avg_week_traffic: +(v.traffic / v.weeks.size).toFixed(1),
+  }));
+}
+function summarizeOffDemand(rows) {
+  const by = {};
+  for (const r of rows) {
+    const c = (by[r.cluster_id] ??= { buzz: 0, search: 0, pain: 0, weeks: new Set() });
+    c.buzz += r.buzz; c.search += r.search_trend; c.pain += r.pain_posts; c.weeks.add(r.week);
+  }
+  return Object.entries(by).map(([cluster_id, v]) => ({
+    cluster_id,
+    total_search: v.search,
+    total_buzz: v.buzz,
+    total_pain_posts: v.pain,
+    avg_week_search: +(v.search / v.weeks.size).toFixed(1),
+  }));
+}
+
 // ---------- 把裁据表压缩成给 LLM 的视图（只留业务可见字段） ----------
 
 const PRUNE_LABEL = {
@@ -154,13 +200,13 @@ const prompt = [
   `# 大单品：${heroItem.item_id}；配件簇清单（各轮候选并集）`,
   JSON.stringify(clusters),
   '',
-  '# 三份市场数据（与选品研判环节看到的同一份，同为业务可见；仅在要写"怎么读数据/什么值得推"的经验时参考）',
-  '## 站内销售（我们平台，群×簇×周；有流量没订单=有兴趣没供给）',
-  JSON.stringify(onSiteSales),
-  '## 站外销售（竞对平台，簇×国家×周；含竞对价格带 price_band）',
-  JSON.stringify(offSiteSales),
-  '## 站外需求（社媒/搜索/痛点帖，簇×国家×周）',
-  JSON.stringify(offSiteDemand),
+  '# 三份市场数据摘要（按簇聚合后的量级/价格带信号；全量原始表在 data/ 下，研判环节读的是同一份，这里给 LLM 只喂汇总，避免 dump 原始行）',
+  '## 站内销售摘要（我们平台按簇聚合；有流量没订单=有兴趣没供给）',
+  JSON.stringify(summarizeOnSite(onSiteSales)),
+  '## 站外销售摘要（竞对平台按簇聚合；含竞对价格带 price_band）',
+  JSON.stringify(summarizeOffSales(offSiteSales)),
+  '## 站外需求摘要（社媒/搜索/痛点帖按簇聚合）',
+  JSON.stringify(summarizeOffDemand(offSiteDemand)),
   '',
   '# 当前生效的参数包',
   '## 研判经验（现行版）',
