@@ -1,0 +1,38 @@
+{
+  "merchant_decisions": [
+    {
+      "merchant_id": "m_trader_general",
+      "package_id": "pkg_sport_loop_band",
+      "publish": true,
+      "why": "我本来就是卖百货小件的，进货渠道拿这种织物表带不难，平台数据看着实在，值得试一把。"
+    },
+    {
+      "merchant_id": "m_trader_general",
+      "package_id": "pkg_metal_bezel_ring",
+      "publish": true,
+      "why": "金属小配件和百货杂货客群渠道都沾边，进货没压力，竞争少先占个位。"
+    }
+  ],
+  "products": [
+    {
+      "product_id": "prod_sport_loop_band_m_trader_general",
+      "cluster_id": "sport_loop_band",
+      "attrs": "黑色回环尼龙织带表带，魔术贴调节，透气排汗，运动通勤百搭款",
+      "price": 14.9,
+      "subsidy": 2.5,
+      "merchant_id": "m_trader_general",
+      "gmt_create": "2026-09-16 00:12:33",
+      "sales_7d": null
+    },
+    {
+      "product_id": "prod_metal_bezel_ring_m_trader_general",
+      "cluster_id": "metal_bezel_ring",
+      "attrs": "银色铝合金表圈保护圈，多色可选，免工具安装，防刮装饰两用",
+      "price": 11.9,
+      "subsidy": 2,
+      "merchant_id": "m_trader_general",
+      "gmt_create": "2026-09-16 00:12:33",
+      "sales_7d": null
+    }
+  ]
+}

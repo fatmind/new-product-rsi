@@ -1,0 +1,60 @@
+{
+  "selection_cards": [
+    {
+      "card_id": "card_premium_metal_band",
+      "cluster_id": "premium_metal_band",
+      "verdict": "不推",
+      "reason": "这款数据面上其实很能打——网上搜的人、竞对销量都在涨，我们平台也完全没货——但它贵：竞对实卖 $35-55，一根表带这个价，咱们平台的买家盘在这个价位撑不起稳定出单，新品 7 天卖满 5 单的风险大。除非后面能给到很深的补贴把实付价打下来再考虑，这期先不推。",
+      "confidence": 0.65
+    },
+    {
+      "card_id": "card_comfort_nylon_band",
+      "cluster_id": "comfort_nylon_band",
+      "verdict": "不推",
+      "reason": "尼龙表带看着热闹，菲律宾竞对销量确实涨得猛，但用户在网上的搜索和讨论热度并没跟着涨——印尼、新加坡的搜索热度反而在回落，整体热度基本原地踏步。卖得动的需求集中在菲律宾一个市场，热度没跟上、靠单一市场撑破零不稳，这期先不推。",
+      "confidence": 0.7
+    },
+    {
+      "card_id": "card_sport_loop_band",
+      "cluster_id": "sport_loop_band",
+      "verdict": "推",
+      "reason": "这款运动织带现在正是缺货的窗口：海外市场上搜的人、讨论的人、竞对平台的销量都在一路涨（印尼竞对一周能卖三百多条，新加坡、菲律宾也同步在涨），而我们平台上完全没人卖，每周却有大几千的浏览量，来的人还都是运动健身、学生、上班族这些真会买的人。价位 $9-16 和竞对实卖价位 $8-15 对得上，照这个价发、配合补贴，出单把握大。放心上。",
+      "confidence": 0.9
+    },
+    {
+      "card_id": "card_silicone_case_sport",
+      "cluster_id": "silicone_case_sport",
+      "verdict": "不推",
+      "reason": "运动保护壳现在网上讨论热度在涨，但竞对平台的销量不涨反跌——印尼从一周三十几件跌到二十几件，新加坡、菲律宾也都在跌。热度还没变成真金白银的购买，这时候进场大概率压货，等竞对销量回暖再说。",
+      "confidence": 0.8
+    },
+    {
+      "card_id": "card_metal_bezel_ring",
+      "cluster_id": "metal_bezel_ring",
+      "verdict": "推",
+      "reason": "金属表圈海外市场在稳步起量：印尼竞对销量从一周二十几条涨到九十多条，新加坡、菲律宾也都在涨；我们平台基本还没人卖（全平台一周偶尔一两单），流量却在涨。价位 $8-14 和竞对实卖 $7-13 贴得住，价格低、决策快，运动、学生、白领人群都对得上。属于起步早、竞争少的机会品，建议上。",
+      "confidence": 0.7
+    },
+    {
+      "card_id": "card_cleaning_kit",
+      "cluster_id": "cleaning_kit",
+      "verdict": "不推",
+      "reason": "清洁套装整体盘子太小：我们平台一周流量就几十，竞对一周才卖三四套，网上的搜索和讨论也寥寥无几。这类耗材可买可不买，撑不起破零需要的销量。",
+      "confidence": 0.9
+    },
+    {
+      "card_id": "card_strap_extender",
+      "cluster_id": "strap_extender",
+      "verdict": "不推",
+      "reason": "加长带扣是极细分的补充件，竞对全网一周才卖一两单的量，我们平台一周流量也只有几十。需求太薄，发了也很难 7 天卖到 5 单。",
+      "confidence": 0.95
+    },
+    {
+      "card_id": "card_cable_organizer",
+      "cluster_id": "cable_organizer",
+      "verdict": "不推",
+      "reason": "理线夹是通用小件，跟 Fitbit 没有专属绑定，用户随处都能买到，竞对一周也就卖两三个。没有专属需求，不值得为它专门发新品。",
+      "confidence": 0.95
+    }
+  ]
+}
