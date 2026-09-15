@@ -1,0 +1,32 @@
+{
+  "round": "r6",
+  "dispatched": 1,
+  "published": 1,
+  "clusters": [
+    {
+      "cluster_id": "ankle_band",
+      "published": true,
+      "merchant_id": "m_premium_boutique",
+      "price": 15.9,
+      "subsidy": 2.5,
+      "pay": 13.4,
+      "competitor_mid": 14,
+      "cost_floor": 10,
+      "band_max": 17,
+      "in_band": true,
+      "sales_7d": 4,
+      "broke": false,
+      "price_dead": false,
+      "pruned_at": "demand",
+      "residual": "实付 ¥13.4 已压进竞对带（≤竞对中位 ¥14）仍只卖 4 单（<5），价格不是凶手——问题在需求/用户群匹配，留给选品研判攻",
+      "evidence": {
+        "sport_fitness": 3,
+        "commuter_whitecollar": 0,
+        "young_student": 1,
+        "onlooker": 0,
+        "discount_hunter": 0
+      }
+    }
+  ],
+  "alerts": []
+}

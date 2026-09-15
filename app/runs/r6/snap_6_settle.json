@@ -1,0 +1,25 @@
+{
+  "round": "r6",
+  "dispatched": 1,
+  "published": 1,
+  "broke_zero": 0,
+  "zero_break_rate": 0,
+  "products": [
+    {
+      "product_id": "prod_ankle_band_m_premium_boutique",
+      "cluster_id": "ankle_band",
+      "merchant_id": "m_premium_boutique",
+      "price": 15.9,
+      "subsidy": 2.5,
+      "sales_7d": 4
+    }
+  ],
+  "trust_updates": [
+    {
+      "merchant_id": "m_premium_boutique",
+      "before": 0.6,
+      "after": 0.5,
+      "why": "发的品未破零"
+    }
+  ]
+}

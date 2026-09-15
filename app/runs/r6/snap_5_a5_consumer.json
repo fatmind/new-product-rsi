@@ -1,0 +1,23 @@
+{
+  "products_with_sales": [
+    {
+      "product_id": "prod_ankle_band_m_premium_boutique",
+      "cluster_id": "ankle_band",
+      "attrs": "黑色弹性织物脚踝带，简约轻奢风，软贴肤不勒脚踝，运动和睡眠都能戴",
+      "price": 15.9,
+      "subsidy": 2.5,
+      "merchant_id": "m_premium_boutique",
+      "gmt_create": "2026-09-15 23:10:35",
+      "sales_7d": 4
+    }
+  ],
+  "sales_by_group": {
+    "prod_ankle_band_m_premium_boutique": {
+      "sport_fitness": 3,
+      "commuter_whitecollar": 0,
+      "young_student": 1,
+      "onlooker": 0,
+      "discount_hunter": 0
+    }
+  }
+}

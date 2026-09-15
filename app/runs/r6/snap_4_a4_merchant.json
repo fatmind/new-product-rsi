@@ -1,0 +1,34 @@
+{
+  "merchant_decisions": [
+    {
+      "merchant_id": "m_factory_leather",
+      "package_id": "pkg_ankle_band",
+      "publish": false,
+      "why": "我是皮具工厂，脚踝带是弹性织物做的，我的皮具产线和工人做不了这个，补贴再多也接不了这活"
+    },
+    {
+      "merchant_id": "m_trader_3c",
+      "package_id": "pkg_ankle_band",
+      "publish": false,
+      "why": "我是卖耳机充电器的，脚踝带这种织物穿戴件没货源也没品控，说辞里平台自己一件货都没卖过，这波流量我接不住，不趟这浑水"
+    },
+    {
+      "merchant_id": "m_premium_boutique",
+      "package_id": "pkg_ankle_band",
+      "publish": true,
+      "why": "轻奢配饰的客群和渠道都搭得上，进货也简单，平台给的需求数据具体可信，我月流水撑得起试这一个款，定价贴着竞对再加点利润。"
+    }
+  ],
+  "products": [
+    {
+      "product_id": "prod_ankle_band_m_premium_boutique",
+      "cluster_id": "ankle_band",
+      "attrs": "黑色弹性织物脚踝带，简约轻奢风，软贴肤不勒脚踝，运动和睡眠都能戴",
+      "price": 15.9,
+      "subsidy": 2.5,
+      "merchant_id": "m_premium_boutique",
+      "gmt_create": "2026-09-15 23:10:35",
+      "sales_7d": null
+    }
+  ]
+}
