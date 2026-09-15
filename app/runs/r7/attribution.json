@@ -1,0 +1,104 @@
+{
+  "round": "r7",
+  "dispatched": 4,
+  "published": 4,
+  "clusters": [
+    {
+      "cluster_id": "sport_loop_band",
+      "published": true,
+      "merchant_id": "m_trader_sport",
+      "price": 13.9,
+      "subsidy": 2.5,
+      "pay": 11.4,
+      "competitor_mid": 11.5,
+      "cost_floor": 9,
+      "band_max": 15,
+      "in_band": true,
+      "sales_7d": 6,
+      "broke": true,
+      "price_dead": false,
+      "pruned_at": "broke",
+      "residual": "破零，无需归因",
+      "evidence": {
+        "sport_fitness": 3,
+        "commuter_whitecollar": 0,
+        "young_student": 3,
+        "onlooker": 0,
+        "discount_hunter": 0
+      }
+    },
+    {
+      "cluster_id": "premium_metal_band",
+      "published": true,
+      "merchant_id": "m_premium_boutique",
+      "price": 42.9,
+      "subsidy": 9.5,
+      "pay": 33.4,
+      "competitor_mid": 45,
+      "cost_floor": 25,
+      "band_max": 55,
+      "in_band": true,
+      "sales_7d": 3,
+      "broke": false,
+      "price_dead": false,
+      "pruned_at": "demand",
+      "residual": "实付 ¥33.4 已压进竞对带（≤竞对中位 ¥45）仍只卖 3 单（<5），价格不是凶手——问题在需求/用户群匹配，留给选品研判攻",
+      "evidence": {
+        "sport_fitness": 0,
+        "commuter_whitecollar": 3,
+        "young_student": 0,
+        "onlooker": 0,
+        "discount_hunter": 0
+      }
+    },
+    {
+      "cluster_id": "leather_band_classic",
+      "published": true,
+      "merchant_id": "m_premium_boutique",
+      "price": 19.9,
+      "subsidy": 5.7,
+      "pay": 14.2,
+      "competitor_mid": 19,
+      "cost_floor": 15,
+      "band_max": 24,
+      "in_band": true,
+      "sales_7d": 1,
+      "broke": false,
+      "price_dead": false,
+      "pruned_at": "demand",
+      "residual": "实付 ¥14.2 已压进竞对带（≤竞对中位 ¥19）仍只卖 1 单（<5），价格不是凶手——问题在需求/用户群匹配，留给选品研判攻",
+      "evidence": {
+        "sport_fitness": 0,
+        "commuter_whitecollar": 1,
+        "young_student": 0,
+        "onlooker": 0,
+        "discount_hunter": 0
+      }
+    },
+    {
+      "cluster_id": "kids_band",
+      "published": true,
+      "merchant_id": "m_trader_sport",
+      "price": 8.9,
+      "subsidy": 2.7,
+      "pay": 6.2,
+      "competitor_mid": 9,
+      "cost_floor": 7,
+      "band_max": 12,
+      "in_band": true,
+      "sales_7d": 6,
+      "broke": true,
+      "price_dead": false,
+      "pruned_at": "broke",
+      "residual": "破零，无需归因",
+      "evidence": {
+        "sport_fitness": 0,
+        "commuter_whitecollar": 0,
+        "young_student": 6,
+        "onlooker": 0,
+        "discount_hunter": 0
+      }
+    }
+  ],
+  "alerts": []
+}

@@ -1,0 +1,55 @@
+{
+  "round": "r7",
+  "dispatched": 4,
+  "published": 4,
+  "broke_zero": 2,
+  "zero_break_rate": 0.5,
+  "products": [
+    {
+      "product_id": "prod_sport_loop_band_m_trader_sport",
+      "cluster_id": "sport_loop_band",
+      "merchant_id": "m_trader_sport",
+      "price": 13.9,
+      "subsidy": 2.5,
+      "sales_7d": 6
+    },
+    {
+      "product_id": "prod_kids_band_m_trader_sport",
+      "cluster_id": "kids_band",
+      "merchant_id": "m_trader_sport",
+      "price": 8.9,
+      "subsidy": 2.7,
+      "sales_7d": 6
+    },
+    {
+      "product_id": "prod_premium_metal_band_m_premium_boutique",
+      "cluster_id": "premium_metal_band",
+      "merchant_id": "m_premium_boutique",
+      "price": 42.9,
+      "subsidy": 9.5,
+      "sales_7d": 3
+    },
+    {
+      "product_id": "prod_leather_band_classic_m_premium_boutique",
+      "cluster_id": "leather_band_classic",
+      "merchant_id": "m_premium_boutique",
+      "price": 19.9,
+      "subsidy": 5.7,
+      "sales_7d": 1
+    }
+  ],
+  "trust_updates": [
+    {
+      "merchant_id": "m_premium_boutique",
+      "before": 0.5,
+      "after": 0.4,
+      "why": "发的品未破零"
+    },
+    {
+      "merchant_id": "m_trader_sport",
+      "before": 0.45,
+      "after": 0.55,
+      "why": "发的品破零"
+    }
+  ]
+}

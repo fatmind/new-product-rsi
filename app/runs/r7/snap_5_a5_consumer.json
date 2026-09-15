@@ -1,0 +1,74 @@
+{
+  "products_with_sales": [
+    {
+      "product_id": "prod_sport_loop_band_m_trader_sport",
+      "cluster_id": "sport_loop_band",
+      "attrs": "回环式弹性尼龙织带运动表带，魔术贴调节，黑/灰/荧光绿三色，轻透排汗，运动通勤两用",
+      "price": 13.9,
+      "subsidy": 2.5,
+      "merchant_id": "m_trader_sport",
+      "gmt_create": "2026-09-15 23:39:08",
+      "sales_7d": 6
+    },
+    {
+      "product_id": "prod_kids_band_m_trader_sport",
+      "cluster_id": "kids_band",
+      "attrs": "小码硅胶儿童表带，卡通配色，防丢扣设计，软弹亲肤",
+      "price": 8.9,
+      "subsidy": 2.7,
+      "merchant_id": "m_trader_sport",
+      "gmt_create": "2026-09-15 23:39:08",
+      "sales_7d": 6
+    },
+    {
+      "product_id": "prod_premium_metal_band_m_premium_boutique",
+      "cluster_id": "premium_metal_band",
+      "attrs": "不锈钢米兰尼斯编织表带，银色，商务正式风，质感拉丝处理",
+      "price": 42.9,
+      "subsidy": 9.5,
+      "merchant_id": "m_premium_boutique",
+      "gmt_create": "2026-09-15 23:40:06",
+      "sales_7d": 3
+    },
+    {
+      "product_id": "prod_leather_band_classic_m_premium_boutique",
+      "cluster_id": "leather_band_classic",
+      "attrs": "头层牛皮经典皮表带，棕黑两色，商务休闲通用款",
+      "price": 19.9,
+      "subsidy": 5.7,
+      "merchant_id": "m_premium_boutique",
+      "gmt_create": "2026-09-15 23:40:06",
+      "sales_7d": 1
+    }
+  ],
+  "sales_by_group": {
+    "prod_sport_loop_band_m_trader_sport": {
+      "sport_fitness": 3,
+      "commuter_whitecollar": 0,
+      "young_student": 3,
+      "onlooker": 0,
+      "discount_hunter": 0
+    },
+    "prod_kids_band_m_trader_sport": {
+      "sport_fitness": 0,
+      "commuter_whitecollar": 0,
+      "young_student": 6,
+      "onlooker": 0,
+      "discount_hunter": 0
+    },
+    "prod_premium_metal_band_m_premium_boutique": {
+      "sport_fitness": 0,
+      "commuter_whitecollar": 3,
+      "young_student": 0,
+      "onlooker": 0,
+      "discount_hunter": 0
+    },
+    "prod_leather_band_classic_m_premium_boutique": {
+      "sport_fitness": 0,
+      "commuter_whitecollar": 1,
+      "young_student": 0,
+      "onlooker": 0,
+      "discount_hunter": 0
+    }
+  }
+}

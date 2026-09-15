@@ -1,0 +1,82 @@
+{
+  "merchant_decisions": [
+    {
+      "merchant_id": "m_trader_sport",
+      "package_id": "pkg_sport_loop_band",
+      "publish": true,
+      "why": "运动织带和我的运动户外配件客群、材质都搭得上，竞对销量摆在那不信都不行，这个我愿意进货试。"
+    },
+    {
+      "merchant_id": "m_trader_sport",
+      "package_id": "pkg_premium_metal_band",
+      "publish": false,
+      "why": "商务金属表带和我卖的运动配件完全不沾边，没货源没品控，客单还高压资金，不碰。"
+    },
+    {
+      "merchant_id": "m_trader_sport",
+      "package_id": "pkg_leather_band_classic",
+      "publish": false,
+      "why": "皮具我从来没做过，进货品控都摸不着，再说看的人群是商务通勤的，跟我的客群也不搭。"
+    },
+    {
+      "merchant_id": "m_trader_sport",
+      "package_id": "pkg_kids_band",
+      "publish": true,
+      "why": "硅胶材质跟我健身小器材是一路货，拿货不难，但平台让我卖6.9比成本线7还低，卖一单亏一单，我自己定价8.9。"
+    },
+    {
+      "merchant_id": "m_premium_boutique",
+      "package_id": "pkg_premium_metal_band",
+      "publish": true,
+      "why": "买表带的是同一批客人、走的也是同一个渠道，算相邻品类能试，就是看了32周没人买这事让我有点犯嘀咕，先小量上看看。"
+    },
+    {
+      "merchant_id": "m_premium_boutique",
+      "package_id": "pkg_leather_band_classic",
+      "publish": true,
+      "why": "皮表带本来就是我的主营，需求是一点点涨上来的不是一阵风，稳稳发。"
+    }
+  ],
+  "products": [
+    {
+      "product_id": "prod_sport_loop_band_m_trader_sport",
+      "cluster_id": "sport_loop_band",
+      "attrs": "回环式弹性尼龙织带运动表带，魔术贴调节，黑/灰/荧光绿三色，轻透排汗，运动通勤两用",
+      "price": 13.9,
+      "subsidy": 2.5,
+      "merchant_id": "m_trader_sport",
+      "gmt_create": "2026-09-15 23:39:08",
+      "sales_7d": null
+    },
+    {
+      "product_id": "prod_kids_band_m_trader_sport",
+      "cluster_id": "kids_band",
+      "attrs": "小码硅胶儿童表带，卡通配色，防丢扣设计，软弹亲肤",
+      "price": 8.9,
+      "subsidy": 2.7,
+      "merchant_id": "m_trader_sport",
+      "gmt_create": "2026-09-15 23:39:08",
+      "sales_7d": null
+    },
+    {
+      "product_id": "prod_premium_metal_band_m_premium_boutique",
+      "cluster_id": "premium_metal_band",
+      "attrs": "不锈钢米兰尼斯编织表带，银色，商务正式风，质感拉丝处理",
+      "price": 42.9,
+      "subsidy": 9.5,
+      "merchant_id": "m_premium_boutique",
+      "gmt_create": "2026-09-15 23:40:06",
+      "sales_7d": null
+    },
+    {
+      "product_id": "prod_leather_band_classic_m_premium_boutique",
+      "cluster_id": "leather_band_classic",
+      "attrs": "头层牛皮经典皮表带，棕黑两色，商务休闲通用款",
+      "price": 19.9,
+      "subsidy": 5.7,
+      "merchant_id": "m_premium_boutique",
+      "gmt_create": "2026-09-15 23:40:06",
+      "sales_7d": null
+    }
+  ]
+}
