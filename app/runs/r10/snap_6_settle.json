@@ -1,0 +1,39 @@
+{
+  "round": "r10",
+  "dispatched": 2,
+  "published": 2,
+  "broke_zero": 2,
+  "zero_break_rate": 1,
+  "products": [
+    {
+      "product_id": "prod_armband_m_trader_3c",
+      "cluster_id": "armband",
+      "merchant_id": "m_trader_3c",
+      "price": 15.9,
+      "subsidy": 3,
+      "sales_7d": 8
+    },
+    {
+      "product_id": "prod_sport_loop_band_m_factory_leather",
+      "cluster_id": "sport_loop_band",
+      "merchant_id": "m_factory_leather",
+      "price": 9.9,
+      "subsidy": 3.45,
+      "sales_7d": 7
+    }
+  ],
+  "trust_updates": [
+    {
+      "merchant_id": "m_trader_3c",
+      "before": 0.5,
+      "after": 0.6,
+      "why": "发的品破零"
+    },
+    {
+      "merchant_id": "m_factory_leather",
+      "before": 0.6,
+      "after": 0.7,
+      "why": "发的品破零"
+    }
+  ]
+}

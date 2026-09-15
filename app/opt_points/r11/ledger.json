@@ -33,7 +33,7 @@
         "pruned_at": "demand"
       }
     ],
-    "status": "patched"
+    "status": "open"
   },
   {
     "cluster_id": "premium_metal_band",
@@ -69,7 +69,7 @@
         "pruned_at": "demand"
       }
     ],
-    "status": "patched"
+    "status": "open"
   },
   {
     "cluster_id": "screen_protector",
@@ -97,7 +97,7 @@
         "pruned_at": "pricing"
       }
     ],
-    "status": "patched"
+    "status": "open"
   },
   {
     "cluster_id": "leather_band_classic",
@@ -133,7 +133,7 @@
         "pruned_at": "demand"
       }
     ],
-    "status": "patched"
+    "status": "open"
   },
   {
     "cluster_id": "magnetic_buckle",
@@ -161,7 +161,7 @@
         "pruned_at": "demand"
       }
     ],
-    "status": "patched"
+    "status": "open"
   },
   {
     "cluster_id": "ankle_band",
@@ -189,7 +189,7 @@
         "pruned_at": "demand"
       }
     ],
-    "status": "patched"
+    "status": "open"
   },
   {
     "cluster_id": "metal_bezel_ring",
@@ -217,6 +217,6 @@
         "pruned_at": "demand"
       }
     ],
-    "status": "patched"
+    "status": "open"
   }
 ]

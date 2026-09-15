@@ -1,0 +1,40 @@
+{
+  "products_with_sales": [
+    {
+      "product_id": "prod_armband_m_trader_3c",
+      "cluster_id": "armband",
+      "attrs": "黑色透气织物运动臂带，硅胶防滑条，跑步健身用，适配主流手机尺寸",
+      "price": 15.9,
+      "subsidy": 3,
+      "merchant_id": "m_trader_3c",
+      "gmt_create": "2026-09-16 00:28:28",
+      "sales_7d": 8
+    },
+    {
+      "product_id": "prod_sport_loop_band_m_factory_leather",
+      "cluster_id": "sport_loop_band",
+      "attrs": "深灰弹性尼龙织带回环表带，魔术贴调节，轻透排汗运动风，缝线处配皮色包边",
+      "price": 9.9,
+      "subsidy": 3.45,
+      "merchant_id": "m_factory_leather",
+      "gmt_create": "2026-09-16 00:28:41",
+      "sales_7d": 7
+    }
+  ],
+  "sales_by_group": {
+    "prod_armband_m_trader_3c": {
+      "sport_fitness": 7,
+      "commuter_whitecollar": 0,
+      "young_student": 1,
+      "onlooker": 0,
+      "discount_hunter": 0
+    },
+    "prod_sport_loop_band_m_factory_leather": {
+      "sport_fitness": 5,
+      "commuter_whitecollar": 0,
+      "young_student": 2,
+      "onlooker": 0,
+      "discount_hunter": 0
+    }
+  }
+}

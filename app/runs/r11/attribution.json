@@ -1,0 +1,80 @@
+{
+  "round": "r11",
+  "dispatched": 3,
+  "published": 3,
+  "clusters": [
+    {
+      "cluster_id": "armband",
+      "published": true,
+      "merchant_id": "m_trader_wearable",
+      "price": 15.9,
+      "subsidy": 3.5,
+      "pay": 12.4,
+      "competitor_mid": 15,
+      "cost_floor": 10,
+      "band_max": 18,
+      "in_band": true,
+      "sales_7d": 8,
+      "broke": true,
+      "price_dead": false,
+      "pruned_at": "broke",
+      "residual": "破零，无需归因",
+      "evidence": {
+        "sport_fitness": 7,
+        "commuter_whitecollar": 0,
+        "young_student": 1,
+        "onlooker": 0,
+        "discount_hunter": 0
+      }
+    },
+    {
+      "cluster_id": "ankle_band",
+      "published": true,
+      "merchant_id": "m_trader_wearable",
+      "price": 12.9,
+      "subsidy": 4.2,
+      "pay": 8.7,
+      "competitor_mid": 14,
+      "cost_floor": 10,
+      "band_max": 17,
+      "in_band": true,
+      "sales_7d": 6,
+      "broke": true,
+      "price_dead": false,
+      "pruned_at": "broke",
+      "residual": "破零，无需归因",
+      "evidence": {
+        "sport_fitness": 5,
+        "commuter_whitecollar": 0,
+        "young_student": 1,
+        "onlooker": 0,
+        "discount_hunter": 0
+      }
+    },
+    {
+      "cluster_id": "sport_loop_band",
+      "published": true,
+      "merchant_id": "m_factory_leather",
+      "price": 9.5,
+      "subsidy": 3.45,
+      "pay": 6.05,
+      "competitor_mid": 11.5,
+      "cost_floor": 9,
+      "band_max": 15,
+      "in_band": true,
+      "sales_7d": 7,
+      "broke": true,
+      "price_dead": false,
+      "pruned_at": "broke",
+      "residual": "破零，无需归因",
+      "evidence": {
+        "sport_fitness": 5,
+        "commuter_whitecollar": 0,
+        "young_student": 2,
+        "onlooker": 0,
+        "discount_hunter": 0
+      }
+    }
+  ],
+  "alerts": []
+}

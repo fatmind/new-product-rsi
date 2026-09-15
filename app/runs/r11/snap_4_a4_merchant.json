@@ -1,0 +1,66 @@
+{
+  "merchant_decisions": [
+    {
+      "merchant_id": "m_factory_leather",
+      "package_id": "pkg_armband",
+      "publish": false,
+      "why": "臂带是硅胶和织物做的运动配件，我们皮具产线没有这套工艺，做不了"
+    },
+    {
+      "merchant_id": "m_factory_leather",
+      "package_id": "pkg_ankle_band",
+      "publish": false,
+      "why": "踝带是弹性织物品，跟我们的皮具产线工艺不搭，没有产线和工人做不了"
+    },
+    {
+      "merchant_id": "m_factory_leather",
+      "package_id": "pkg_sport_loop_band",
+      "publish": true,
+      "why": "这个是表带，跟我们的皮表带工艺最接近，缝制调扣都会做，平台给的价格也到位，愿意试"
+    },
+    {
+      "merchant_id": "m_trader_wearable",
+      "package_id": "pkg_armband",
+      "publish": true,
+      "why": "臂带跟我卖的智能手表配件客群完全是一拨人，进货也够得着，外面卖得火平台上又没货，定15.9补贴后到手12.4比竞对还便宜，值得试。"
+    },
+    {
+      "merchant_id": "m_trader_wearable",
+      "package_id": "pkg_ankle_band",
+      "publish": true,
+      "why": "踝带上轮卖过4单有人认，也是我手表配件客群的邻接品，这轮补贴给到手7.8美元很心动，定12.9再补一次货试试。"
+    }
+  ],
+  "products": [
+    {
+      "product_id": "prod_sport_loop_band_m_factory_leather",
+      "cluster_id": "sport_loop_band",
+      "attrs": "黑色回环式弹性织物表带，魔术贴调节，轻透排汗，运动通勤两用",
+      "price": 9.5,
+      "subsidy": 3.45,
+      "merchant_id": "m_factory_leather",
+      "gmt_create": "2026-09-16 00:47:41",
+      "sales_7d": null
+    },
+    {
+      "product_id": "prod_armband_m_trader_wearable",
+      "cluster_id": "armband",
+      "attrs": "透气织物运动臂带，黑灰两色，可调魔术贴，适配主流智能手表用户跑步健身场景",
+      "price": 15.9,
+      "subsidy": 3.5,
+      "merchant_id": "m_trader_wearable",
+      "gmt_create": "2026-09-16 00:47:55",
+      "sales_7d": null
+    },
+    {
+      "product_id": "prod_ankle_band_m_trader_wearable",
+      "cluster_id": "ankle_band",
+      "attrs": "弹性织物脚踝带，黑色，用于睡眠监测和骑行时佩戴手环不占手腕",
+      "price": 12.9,
+      "subsidy": 4.2,
+      "merchant_id": "m_trader_wearable",
+      "gmt_create": "2026-09-16 00:47:55",
+      "sales_7d": null
+    }
+  ]
+}

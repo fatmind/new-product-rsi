@@ -1,0 +1,60 @@
+{
+  "selection_cards": [
+    {
+      "card_id": "card_armband",
+      "cluster_id": "armband",
+      "verdict": "推",
+      "reason": "这个簇是本轮最硬的机会：外面平台卖得又多又猛（光印尼一周就一千七八百单，新加坡、菲律宾也在跟着涨），搜的人、聊的人同样一路往上走，说明大家是真想买；而咱们平台上几千人在看、却一直没货，是纯空白。买的人也实在——健身、学生、通勤白领都是带着明确需求来的，不是闲逛。竞对卖 12-18 刀，咱们 10-20 的价位带贴得住。发，定价贴着竞对走，别定太高。",
+      "confidence": 0.9
+    },
+    {
+      "card_id": "card_ankle_band",
+      "cluster_id": "ankle_band",
+      "verdict": "推",
+      "reason": "上一轮推过一次，卖了 4 单、就差 1 单过线，说明这个品有人认；当时是到手价还压得不够低。这轮外面需求还在明显变热（印尼搜的人翻了三倍，菲律宾也在涨），咱们平台上依然没人卖、还是空白。这次会把消费者补贴给足、把到手价压得比上次更深（竞对带 11-17，建议贴着 11-12 走），值得再发一次。",
+      "confidence": 0.7
+    },
+    {
+      "card_id": "card_sport_loop_band",
+      "cluster_id": "sport_loop_band",
+      "verdict": "推",
+      "reason": "三个市场（印尼、菲律宾、新加坡）外面销量都在稳步涨，搜的人、讨论的人也同步在涨，需求是真的；咱们平台上不少人在看、一直没人卖。量级比臂带小一截，但涨得稳、买的人目的明确（健身人群+学生），价格带 9-16 和竞对 8-15 也贴得住。可以发，定价贴竞对走，别上浮。",
+      "confidence": 0.6
+    },
+    {
+      "card_id": "card_screen_protector",
+      "cluster_id": "screen_protector",
+      "verdict": "不推",
+      "reason": "咱们平台上已经有商家在卖这个了，每周都有稳定几十单，不是空白市场——新发品只是去抢老商家的生意，抢不来增量。之前推过一次也没跑出来。单价又低（3-6 刀），更难冲出量。不建议发。",
+      "confidence": 0.8
+    },
+    {
+      "card_id": "card_leather_band_classic",
+      "cluster_id": "leather_band_classic",
+      "verdict": "不推",
+      "reason": "这个簇之前推过好几轮，到手价已经压到和竞对一个水平了，还是卖不动，几轮加起来就出了几单——说明它在我们平台就是起不来，不是价格的问题。外面盘子也小（全部市场一周加起来两百单上下），撑不起破零。放弃，别再发了。",
+      "confidence": 0.85
+    },
+    {
+      "card_id": "card_cheap_strap_basic",
+      "cluster_id": "cheap_strap_basic",
+      "verdict": "不推",
+      "reason": "需求和外面销量其实都不差，但有个绕不过去的硬伤：竞对这个品就卖 2.5-4 刀，咱们的货按 7-10 刀的成本结构，再怎么补也压不进人家的价格带——消费者一比价就走。价格够不着，需求再热也接不住。不建议发。",
+      "confidence": 0.75
+    },
+    {
+      "card_id": "card_solar_charger_clip",
+      "cluster_id": "solar_charger_clip",
+      "verdict": "不推",
+      "reason": "外面平台一周就卖两三单，搜的人也寥寥无几——这东西概念听着新鲜，真掏钱的人极少，热度一直没变成购买。咱们平台上看的人也少。没有量，发了也白发。",
+      "confidence": 0.85
+    },
+    {
+      "card_id": "card_sticker_skin",
+      "cluster_id": "sticker_skin",
+      "verdict": "不推",
+      "reason": "外面一周就卖几单，需求零散、看得人少，单价虽然便宜但根本凑不够量。这种小贴纸撑不起破零线，别发。",
+      "confidence": 0.85
+    }
+  ]
+}

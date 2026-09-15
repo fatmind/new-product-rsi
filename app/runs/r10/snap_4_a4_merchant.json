@@ -1,0 +1,44 @@
+{
+  "merchant_decisions": [
+    {
+      "merchant_id": "m_trader_3c",
+      "package_id": "pkg_armband",
+      "publish": true,
+      "why": "我卖耳机充电器的，跑步戴耳机的就是我这拨客人，臂带和我的货一个渠道一个客群，市场上没货还在涨，进得着货就接。"
+    },
+    {
+      "merchant_id": "m_trader_3c",
+      "package_id": "pkg_sport_loop_band",
+      "publish": false,
+      "why": "这是表带，跟我卖耳机充电器完全不沾边，我没货源也没品控，补再多也不敢碰。"
+    },
+    {
+      "merchant_id": "m_factory_leather",
+      "package_id": "pkg_sport_loop_band",
+      "publish": true,
+      "why": "织带裁切缝制和皮表带产线工艺相近做得来，上期验证卖得动、市场还在涨，工厂压价9.9美元跟上量。"
+    }
+  ],
+  "products": [
+    {
+      "product_id": "prod_armband_m_trader_3c",
+      "cluster_id": "armband",
+      "attrs": "黑色透气织物运动臂带，硅胶防滑条，跑步健身用，适配主流手机尺寸",
+      "price": 15.9,
+      "subsidy": 3,
+      "merchant_id": "m_trader_3c",
+      "gmt_create": "2026-09-16 00:28:28",
+      "sales_7d": null
+    },
+    {
+      "product_id": "prod_sport_loop_band_m_factory_leather",
+      "cluster_id": "sport_loop_band",
+      "attrs": "深灰弹性尼龙织带回环表带，魔术贴调节，轻透排汗运动风，缝线处配皮色包边",
+      "price": 9.9,
+      "subsidy": 3.45,
+      "merchant_id": "m_factory_leather",
+      "gmt_create": "2026-09-16 00:28:41",
+      "sales_7d": null
+    }
+  ]
+}
