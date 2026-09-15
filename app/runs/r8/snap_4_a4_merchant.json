@@ -1,0 +1,38 @@
+{
+  "merchant_decisions": [
+    {
+      "merchant_id": "m_trader_general",
+      "package_id": "pkg_armband",
+      "publish": true,
+      "why": "咱是卖综合百货的，进这种小件不算跨行，平台搜的人多还没货，价格压过竞对中位就值得试一把。"
+    },
+    {
+      "merchant_id": "m_trader_general",
+      "package_id": "pkg_ankle_band",
+      "publish": true,
+      "why": "跟臂带同一路货源客群也搭，盘子虽小但刚起量没竞争，一轮两个新品刚好占住先发。"
+    }
+  ],
+  "products": [
+    {
+      "product_id": "prod_armband_m_trader_general",
+      "cluster_id": "armband",
+      "attrs": "透气织物运动臂带，黑灰两色，适配大屏手机，跑步健身通勤都能用",
+      "price": 15.9,
+      "subsidy": 3,
+      "merchant_id": "m_trader_general",
+      "gmt_create": "2026-09-15 23:56:34",
+      "sales_7d": null
+    },
+    {
+      "product_id": "prod_ankle_band_m_trader_general",
+      "cluster_id": "ankle_band",
+      "attrs": "弹性织物脚踝带，黑色，睡眠监测和骑行佩戴不勒腿",
+      "price": 12.9,
+      "subsidy": 4.2,
+      "merchant_id": "m_trader_general",
+      "gmt_create": "2026-09-15 23:56:34",
+      "sales_7d": null
+    }
+  ]
+}

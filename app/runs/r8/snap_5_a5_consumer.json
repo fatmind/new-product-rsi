@@ -1,0 +1,40 @@
+{
+  "products_with_sales": [
+    {
+      "product_id": "prod_armband_m_trader_general",
+      "cluster_id": "armband",
+      "attrs": "透气织物运动臂带，黑灰两色，适配大屏手机，跑步健身通勤都能用",
+      "price": 15.9,
+      "subsidy": 3,
+      "merchant_id": "m_trader_general",
+      "gmt_create": "2026-09-15 23:56:34",
+      "sales_7d": 8
+    },
+    {
+      "product_id": "prod_ankle_band_m_trader_general",
+      "cluster_id": "ankle_band",
+      "attrs": "弹性织物脚踝带，黑色，睡眠监测和骑行佩戴不勒腿",
+      "price": 12.9,
+      "subsidy": 4.2,
+      "merchant_id": "m_trader_general",
+      "gmt_create": "2026-09-15 23:56:34",
+      "sales_7d": 5
+    }
+  ],
+  "sales_by_group": {
+    "prod_armband_m_trader_general": {
+      "sport_fitness": 7,
+      "commuter_whitecollar": 0,
+      "young_student": 1,
+      "onlooker": 0,
+      "discount_hunter": 0
+    },
+    "prod_ankle_band_m_trader_general": {
+      "sport_fitness": 4,
+      "commuter_whitecollar": 0,
+      "young_student": 1,
+      "onlooker": 0,
+      "discount_hunter": 0
+    }
+  }
+}

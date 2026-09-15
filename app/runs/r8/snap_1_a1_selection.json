@@ -1,0 +1,60 @@
+{
+  "selection_cards": [
+    {
+      "card_id": "card_armband",
+      "cluster_id": "armband",
+      "verdict": "推",
+      "reason": "跑步健身的人满世界找这个臂带，三个市场同时在涨：竞对平台上印尼一周能卖小两千条还在往上冲、新加坡菲律宾也在涨，而搜的人、聊的人、吐槽手腕出汗的人一直在变多。我们平台搜的人每周上千但根本没货，谁来发都是白捡的需求。买家也很明确——健身的、通勤白领、学生都在搜，不是闲逛的。定价贴着竞对的 12-18 刀走，别定高。",
+      "confidence": 0.9
+    },
+    {
+      "card_id": "card_ankle_band",
+      "cluster_id": "ankle_band",
+      "verdict": "推",
+      "reason": "脚踝带是最近两三个月才明显起量的：竞对那边印尼销量翻了好几倍、菲律宾也在涨，搜的人和讨论睡眠监测、骑行场景的人都在变多。我们平台一直没货，但印尼健身人群、菲律宾学生每周都有几百人在看。整体盘子比臂带小一截，属于第二梯队的机会，定价贴住竞对的 11-17 刀就行。",
+      "confidence": 0.7
+    },
+    {
+      "card_id": "card_premium_metal_band",
+      "cluster_id": "premium_metal_band",
+      "verdict": "不推",
+      "reason": "需求确实在涨，新加坡白领搜得也不少，但这个簇客单价 35-55 刀，对我们平台的买家盘太贵了。这类高价配件就算需求热，新品期也很难冲出足够销量，发出来大概率压在手里。",
+      "confidence": 0.75
+    },
+    {
+      "card_id": "card_charging_dock",
+      "cluster_id": "charging_dock",
+      "verdict": "不推",
+      "reason": "三个市场加起来一周卖不到 10 个，而且还在往下掉，搜的人也一直没起色。官方本来就随表配了充电线，大家没有额外买底座的习惯，这个需求基本是空的。",
+      "confidence": 0.85
+    },
+    {
+      "card_id": "card_screen_protector",
+      "cluster_id": "screen_protector",
+      "verdict": "不推",
+      "reason": "这个品我们平台一直有商家在卖，每周都有稳定出货，不是缺货的空窗。现在再发新链接就是跟老商家抢存量生意，很难抢到流量，不值得推。",
+      "confidence": 0.85
+    },
+    {
+      "card_id": "card_cheap_strap_basic",
+      "cluster_id": "cheap_strap_basic",
+      "verdict": "不推",
+      "reason": "热度是真的高，竞对卖得也好，但有个硬伤：竞对上这东西只卖 2.5-4 刀，我们这个簇只能定价在 7-10 刀，比竞对贵了近一倍。消费者买素色基础款表带就是图便宜，一定会拿竞对比价，贵一倍基本卖不动，别推。",
+      "confidence": 0.8
+    },
+    {
+      "card_id": "card_leather_band_classic",
+      "cluster_id": "leather_band_classic",
+      "verdict": "不推",
+      "reason": "新加坡白领有点兴趣、销量也在慢慢涨，但盘子太小——竞对一周也就卖几十条，跟这轮其他机会比明显小一档，撑不起新品需要的出货量，先不做。",
+      "confidence": 0.6
+    },
+    {
+      "card_id": "card_travel_case",
+      "cluster_id": "travel_case",
+      "verdict": "不推",
+      "reason": "哪里都没动静：竞对一周卖两三个，搜索和讨论量常年趴着不动，平时用得又少，属于可有可无的配件，推了也没人买。",
+      "confidence": 0.9
+    }
+  ]
+}

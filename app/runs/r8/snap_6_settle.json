@@ -1,0 +1,33 @@
+{
+  "round": "r8",
+  "dispatched": 2,
+  "published": 2,
+  "broke_zero": 2,
+  "zero_break_rate": 1,
+  "products": [
+    {
+      "product_id": "prod_armband_m_trader_general",
+      "cluster_id": "armband",
+      "merchant_id": "m_trader_general",
+      "price": 15.9,
+      "subsidy": 3,
+      "sales_7d": 8
+    },
+    {
+      "product_id": "prod_ankle_band_m_trader_general",
+      "cluster_id": "ankle_band",
+      "merchant_id": "m_trader_general",
+      "price": 12.9,
+      "subsidy": 4.2,
+      "sales_7d": 5
+    }
+  ],
+  "trust_updates": [
+    {
+      "merchant_id": "m_trader_general",
+      "before": 0.5,
+      "after": 0.6,
+      "why": "发的品破零"
+    }
+  ]
+}
