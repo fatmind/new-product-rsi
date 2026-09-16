@@ -233,6 +233,41 @@ function mdDocs() {
   return docs;
 }
 
+// 演化线 hops：从 opt_points/*/changelog.md 实时重建，不用 LLM 分析缓存（那会过期）。
+// 每跳 = 自迭代自己写的「复盘结论 + 改动清单」原文转述，from = 上一跳的 to（或 init）。
+// 解析约定见 changelog：## 复盘结论（首条 bullet 作 case）、## 改动清单 · 选品研判经验 / · 价格激励口径（逐条原文作 changes）
+function evolutionFromChangelogs() {
+  const hops = { selection: [], incentive: [] };
+  let lastVer = 'init';
+  for (const r of rounds) {
+    const clFile = join(APP_DIR, 'opt_points', r, 'changelog.md');
+    if (!existsSync(clFile)) continue; // 该轮无 changelog（如 r1 用 init 跑），from 保持上一版本
+    const md = readFileSync(clFile, 'utf8');
+    // case：## 复盘结论 下的第一条列表项
+    const conclMatch = md.match(/^## 复盘结论\s*\n\n?[-*]\s*([^\n]+)/m);
+    const case_ = conclMatch ? conclMatch[1].trim() : '';
+    // changes：两个「## 改动清单 · X」段，各自续的行级列表项
+    for (const [key, label] of [['selection', '选品研判经验'], ['incentive', '价格激励口径']]) {
+      const changes = [];
+      const segMatch = md.match(new RegExp(`^## 改动清单 · ${label}\\s*\\n(.*?)(?=\\n## |\\n##|\\n##$|$)`, 'm'));
+      if (segMatch) {
+        for (const ln of segMatch[1].split('\n')) {
+          const t = ln.trim();
+          if (!t) continue;
+          // 条目行：数字编号（1. 2. 3.）或 bullet（- *）
+          const m = t.match(/^(?:[-*]|\d+[.、)])\s+(.+)$/);
+          if (m) changes.push(m[1]);
+          // 续行（非条目开头）：附着到上一条末尾
+          else if (changes.length) changes[changes.length - 1] += t;
+        }
+      }
+      if (changes.length) hops[key].push({ from: lastVer, to: r, case: case_, changes });
+    }
+    lastVer = r;
+  }
+  return hops;
+}
+
 const DATA = {
   meta: {
     hero: heroItem.item_id,
@@ -264,8 +299,8 @@ const DATA = {
     },
   },
   evolution: {
-    selection: analysis.evolution.selection,
-    incentive: analysis.evolution.incentive,
+    // 用 changelog 实时重建的 hops，不读 analysis 缓存（缓存只到 r5，会过期）
+    ...evolutionFromChangelogs(),
     docs: mdDocs(),
   },
   rounds: rounds.map((r) => ({
@@ -577,5 +612,8 @@ ${readFileSync(new URL('./report_client.js', import.meta.url), 'utf8')}
 </html>
 `;
 
-writeFileSync(join(RUNS_DIR, 'report.html'), html);
-console.log(`[report] 已生成 ${join(RUNS_DIR, 'report.html')}（${rounds.length} 轮）`);
+// 输出文件名：去掉脚本自身后第一个非 - 开头位置参数可指定（默认 report.html），如 node app/flow/report.js --fresh report_v2.html
+const outName = process.argv.slice(2).find((a) => a && !a.startsWith('-'));
+
+writeFileSync(join(RUNS_DIR, outName ?? 'report.html'), html);
+console.log(`[report] 已生成 ${join(RUNS_DIR, outName ?? 'report.html')}（${rounds.length} 轮）`);
