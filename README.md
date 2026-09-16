@@ -53,7 +53,7 @@ spec/                  Design docs (system architecture, ontology, business map,
 draf/                  Design thinking & consensus notes
 app/
   ontology/            Object schema definitions (declarative; validation derives from them)
-  flow/                run_round · self_iterate (DFS-pruning) · attribution (checkpoint layer) · improvement_ledger · replay (diagnostic) · report · analyze · checks · reset
+  flow/                run_round · self_iterate (DFS-pruning) · attribution (checkpoint layer) · improvement_ledger · replay (diagnostic) · report · checks · reset
   action/              abstract (interface contracts) · system · business · env (merchants, consumer groups)
   llm/                 LLM adapter (claude code) — the single exit for every LLM call
   lib/                 Shared utils (Beijing-time, constants, ontology context, market/competitor price-band)
@@ -77,8 +77,8 @@ node app/flow/run_round.js r1
 # Self-iterate: review rounds up to rN, produce opt_points/rN+1
 node app/flow/self_iterate.js r1
 
-# Generate the experiment report (god-view review, needs --fresh to re-analyze)
-node app/flow/report.js --fresh
+# Generate the experiment report (default filename report.html; pass one to change it)
+node app/flow/report.js report_v2.html
 
 # Dev reset: wipe runs/ and opt_points/rN, restore merchant trust to trust_init
 node app/flow/reset.js
@@ -91,7 +91,7 @@ node app/flow/run_round.js r1    # run the first round
 node app/flow/self_iterate.js r1 # review r1 → produce opt_points/r2
 node app/flow/run_round.js r2    # run with the new parameter package
 # ... repeat ...
-node app/flow/report.js --fresh  # god-view report on all rounds
+node app/flow/report.js report_v2.html  # report on all rounds (hops parsed live from changelogs, remarks are static)
 ```
 
 ## Attribution checkpoint layer (why self-iteration is DFS pruning)

@@ -1,17 +1,17 @@
 // flow/report.js —— 最终实验报告生成器（布局以验收稿 index.html 为准，接真实数据）
-// 用法：node app/flow/report.js [--fresh]
-//   默认复用 runs/report_analysis.json 里的 LLM 分析缓存；--fresh 重新调 qodercli 分析。
+// 用法：node app/flow/report.js [输出文件名]（默认 report.html）
 // 板块：01 总览（柱线图 + LLM 提醒）02 业务流程与环境构造（流程链 / 数据构造检查 / 商家 / 消费者）
 //       03 自迭代（两条演化线时间线 + 完整原文抽屉）04 逐轮检查（每轮 alerts + 5 节点明细，节点数据按轮组织）
-// 分工：强规则校验/数据检查 = checks.js（代码断言）；提醒/演化/节点分析 = analyze.js（qodercli，上帝视角）。
+// 分工：强规则校验/数据检查 = checks.js（代码断言）；提醒/演化/节点分析 = 固化评语（report_remarks.json，上帝视角，见下）。
 // 注意：报告是给实验主理人看的（上帝视角，含商家内心话与真值评卷），只出不进——绝不能作为自迭代的输入。
+// 演化线 hops（自迭代各版改动）从 opt_points/*/changelog.md 实时解析；上帝视角 LLM 评语为静态固化
+// （report_remarks.json，当前覆盖 r1-r5）——不再读 report_analysis.json 缓存、也不再调 LLM。
 
 import { existsSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { bjNow } from '../lib/time.js';
 import { ZERO_BREAK_THRESHOLD } from '../lib/consts.js';
 import { runChecks, runDataChecks } from './checks.js';
-import { analyze } from './analyze.js';
 
 const APP_DIR = new URL('..', import.meta.url).pathname;
 const RUNS_DIR = join(APP_DIR, 'runs');
@@ -66,20 +66,17 @@ const summaries = rounds.map((r) => ({
 const checksByRound = Object.fromEntries(rounds.map((r) => [r, runChecks(r)]));
 const dataChecks = runDataChecks();
 
-// ---------- LLM 分析（缓存；--fresh 重跑） ----------
+// ---------- 上帝视角评语（静态固化，非 LLM 实时调用） ----------
+// 从 report_analysis.json 抽出的 r1-r5 评卷快照（8/14 分析）。仅前端展示，不回流优化。
+// 新增轮次评语需补进 report_remarks.json（见其头部 note）。
 
-const cachePath = join(RUNS_DIR, 'report_analysis.json');
-let analysis;
-if (!process.argv.includes('--fresh') && existsSync(cachePath)) {
-  analysis = readJson(cachePath);
-  console.log('[report] 复用分析缓存 report_analysis.json（--fresh 可重新分析）');
-} else {
-  console.log('[report] 调 qodercli 做上帝视角分析…');
-  analysis = await analyze(rounds, summaries, checksByRound);
-  analysis.generated_at = bjNow();
-  writeFileSync(cachePath, JSON.stringify(analysis, null, 2));
-  console.log('[report] 分析完成，已缓存');
-}
+const remarksPath = join(APP_DIR, 'flow', 'report_remarks.json');
+const remarks = existsSync(remarksPath) ? readJson(remarksPath) : { side_note: {}, rounds: {} };
+// 兼容旧命名
+const analysis = {
+  side_note: remarks.side_note,
+  rounds: remarks.rounds,
+};
 
 // ---------- 组装 DATA（注入前端） ----------
 
@@ -299,7 +296,7 @@ const DATA = {
     },
   },
   evolution: {
-    // 用 changelog 实时重建的 hops，不读 analysis 缓存（缓存只到 r5，会过期）
+    // 用 changelog 实时重建的 hops，不读评语固化文件
     ...evolutionFromChangelogs(),
     docs: mdDocs(),
   },

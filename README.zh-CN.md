@@ -53,7 +53,7 @@ spec/                  设计文档（实验设计、本体、业务地图、主
 draf/                  设计思考与共识笔记
 app/
   ontology/            本体对象 schema 定义（声明式，校验从定义派生）
-  flow/                run_round · self_iterate（DFS 剪枝式）· attribution（归因裁据层）· improvement_ledger（改进点台账）· replay（重放诊断，仅展示）· report · analyze · checks · reset
+  flow/                run_round · self_iterate（DFS 剪枝式）· attribution（归因裁据层）· improvement_ledger（改进点台账）· replay（重放诊断，仅展示）· report · checks · reset
   action/              abstract（接口契约）· system · business · env（商家/消费者群）
   llm/                 LLM 适配层（bin 用 claude code）—— 全部 LLM 调用的唯一出口
   lib/                 公共工具（北京时间、常量、本体上下文、竞对价格带 market）
@@ -77,8 +77,8 @@ node app/flow/run_round.js r1
 # 自迭代：复盘截至 rN 的轮次，产出 opt_points/rN+1
 node app/flow/self_iterate.js r1
 
-# 生成实验报告（上帝视角评审，--fresh 才会重新分析）
-node app/flow/report.js --fresh
+# 生成实验报告（文件名默认为 report.html，可指定其它名）
+node app/flow/report.js report_v2.html
 
 # 开发期重置：清 runs/ 和 opt_points/rN，trust 还原 trust_init
 node app/flow/reset.js
@@ -91,7 +91,7 @@ node app/flow/run_round.js r1     # 跑第一轮
 node app/flow/self_iterate.js r1  # 复盘 r1 → 产出 opt_points/r2
 node app/flow/run_round.js r2     # 用新参数包跑第二轮
 # ... 循环 ...
-node app/flow/report.js --fresh   # 对全部轮次出上帝视角报告
+node app/flow/report.js report_v2.html  # 对全部轮次出报告（演化线从 changelog 实时解析，评语为静态固化）
 ```
 
 ## 归因裁据层（自迭代为什么改成 DFS 剪枝）
